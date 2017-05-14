@@ -14,11 +14,14 @@ $(document).ready(function() {
                 type: "POST",
                 data: {
                     texttotranslate : $('#texttotranslate').val(),
-                    language        : $('#language').val()
+                    ttype           : $('#ttype').val()
                 },
                 dataType: 'json',
                 success: function (data) {
-                    $('#texttotranslate').val(data.translatedText);
+                    $('#texttotranslate').val(data.texttranslated);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Status: " + textStatus); alert("Error: " + errorThrown);
                 }
             });
         });
@@ -27,6 +30,7 @@ $(document).ready(function() {
 <div id="outer">
     <h1>Morse Code Translator</h1>
 
+
     <div id="el1">
 <textarea name="message" rows="10" cols="30" id="texttotranslate">
 The cat was playing in the garden.
@@ -34,7 +38,7 @@ The cat was playing in the garden.
     </div>
 
     <div id="el2">
-        <select id="language">
+        <select id="ttype">
             <option value="MCTOENGLISH" >English</option>
             <option value="ENGLISH2MC">Morse Code</option>
         </select>

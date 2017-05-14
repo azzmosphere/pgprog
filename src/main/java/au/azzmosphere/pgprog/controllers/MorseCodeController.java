@@ -20,29 +20,22 @@ import java.util.HashMap;
  */
 @Controller
 
-public class MorseCodeController {
-    private ChallengeInterface challengeInterface = new MorseCodeTranslater();
+public class MorseCodeController extends  ControllerBase {
+
+    public MorseCodeController() {
+        setChallenge(new MorseCodeTranslater());
+    }
 
     @RequestMapping(value="/morsecode", method= RequestMethod.POST)
-    public @ResponseBody MorseCodeModel translate(
+    public @ResponseBody HashMap translate(
             @RequestParam(value="texttotranslate") String textToTranslate,
-            @RequestParam(value="language") String language
+            @RequestParam(value="ttype") String language
     ) {
-        HashMap<String, String> hashMap = new HashMap<>();
 
+        HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put("texttotranslate", textToTranslate);
         hashMap.put("ttype", language);
-        String rv = "";
 
-        challengeInterface.putInput(hashMap);
-        try {
-            challengeInterface.process();
-            HashMap h = challengeInterface.returnValues();
-            rv = (String) h.get("texttranslated");
-        }
-        catch (Exception e) {
-            rv = "ERROR: " + e.getMessage();
-        }
-        return new MorseCodeModel(rv);
+        return process(hashMap);
     }
 }
