@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
+ *
+ * The base controller is used to re-direct GET, PUT and other HTTP methods
+ * to the more concrete controllers.
+ *
  * Created by aaron.spiteri on 13/5/17.
  */
 @Controller

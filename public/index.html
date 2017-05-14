@@ -4,15 +4,47 @@
 <head>
     <meta charset="utf-8">
 
-    <title>The HTML5 Herald</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
+    <title>Programming Problems</title>
+    <script src="/js/jquery-3.2.1.min.js"></script>
 
 </head>
 
 <body>
+<script >
+$(document).ready(function() {
+        $('#translate').click(function () {
+            $.ajax({
+                url: '/morsecode',
+                type: "POST",
+                data: {
+                    texttotranslate: "field1",
+                    language: "field2"
+                },
+                dataType: 'json',
+                success: function (data) {
+                    alert(data.translatedText);
+                }
+            });
+        });
+});
+    </script>
+<div id="outer">
+    <h1>Programming Problems</h1>
 
-Hello World
+    <div id="el1">
+<textarea name="message" rows="10" cols="30" id="texttotranslate">
+The cat was playing in the garden.
+</textarea>
+    </div>
 
+    <div id="el2">
+<select id="language">
+    <option value="English" >English</option>
+    <option value="Morse Code">Morse Code</option>
+</select>
+        <button id="translate" type="button">Click Me!</button>
+    </div>
+
+</div>
 </body>
 </html>
