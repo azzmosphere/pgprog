@@ -20,7 +20,7 @@ import java.util.HashMap;
  */
 @Controller
 
-public class PgProgController {
+public class MorseCodeController {
     private ChallengeInterface challengeInterface = new MorseCodeTranslater();
 
     @RequestMapping(value="/morsecode", method= RequestMethod.POST)
