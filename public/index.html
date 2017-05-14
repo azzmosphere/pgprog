@@ -17,12 +17,12 @@ $(document).ready(function() {
                 url: '/morsecode',
                 type: "POST",
                 data: {
-                    texttotranslate: "field1",
-                    language: "field2"
+                    texttotranslate : $('#texttotranslate').val(),
+                    language        : $('#language').val()
                 },
                 dataType: 'json',
                 success: function (data) {
-                    alert(data.translatedText);
+                    $('#texttotranslate').val(data.translatedText);
                 }
             });
         });
@@ -39,8 +39,8 @@ The cat was playing in the garden.
 
     <div id="el2">
 <select id="language">
-    <option value="English" >English</option>
-    <option value="Morse Code">Morse Code</option>
+    <option value="MCTOENGLISH" >English</option>
+    <option value="ENGLISH2MC">Morse Code</option>
 </select>
         <button id="translate" type="button">Click Me!</button>
     </div>
