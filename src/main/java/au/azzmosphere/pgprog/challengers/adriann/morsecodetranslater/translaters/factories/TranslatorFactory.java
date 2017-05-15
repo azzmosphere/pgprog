@@ -1,7 +1,7 @@
-package au.azzmosphere.pgprog.challengers.morsecodetranslater.translaters.factories;
-import au.azzmosphere.pgprog.challengers.morsecodetranslater.translaters.concrete.MC2English;
-import au.azzmosphere.pgprog.challengers.morsecodetranslater.translaters.concrete.English2MC;
-import au.azzmosphere.pgprog.challengers.morsecodetranslater.translaters.Translator;
+package au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.translaters.factories;
+import au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.translaters.concrete.MC2English;
+import au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.translaters.concrete.English2MC;
+import au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.translaters.Translator;
 
 /**
  * Created by aaron.spiteri on 14/5/17.

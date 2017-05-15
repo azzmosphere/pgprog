@@ -1,7 +1,7 @@
-package au.azzmosphere.pgprog.challengers.morsecodetranslater.translaters.concrete;
+package au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.translaters.concrete;
 
-import au.azzmosphere.pgprog.challengers.morsecodetranslater.mappings.MCMapping;
-import au.azzmosphere.pgprog.challengers.morsecodetranslater.translaters.TranslatorBase;
+import au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.mappings.MCMapping;
+import au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.translaters.TranslatorBase;
 
 /**
  * Created by aaron.spiteri on 14/5/17.

@@ -1,7 +1,7 @@
-package au.azzmosphere.pgprog.challengers.morsecodetranslater.translaters;
+package au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.translaters;
 
 import java.util.Arrays;
-import au.azzmosphere.pgprog.challengers.morsecodetranslater.mappings.MCMapping;
+import au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.mappings.MCMapping;
 
 /**
  * Created by aaron.spiteri on 14/5/17.

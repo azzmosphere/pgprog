@@ -9,4 +9,5 @@ public interface ChallengeInterface {
     void putInput(HashMap inputMap);
     void process() throws Exception;
     HashMap returnValues();
+    void reset();
 }

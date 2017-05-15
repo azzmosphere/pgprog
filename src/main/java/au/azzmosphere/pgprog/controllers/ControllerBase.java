@@ -21,6 +21,7 @@ public abstract class ControllerBase {
     protected final HashMap process(HashMap input) {
         HashMap rv = null;
         try {
+            challenge.reset();
             challenge.putInput(input);
             challenge.process();
             rv = challenge.returnValues();

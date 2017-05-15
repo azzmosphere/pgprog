@@ -1,4 +1,4 @@
-package au.azzmosphere.pgprog.challengers.morsecodetranslater.translaters.factories;
+package au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.translaters.factories;
 
 /**
  * Created by aaron.spiteri on 14/5/17.

@@ -1,8 +1,6 @@
 package au.azzmosphere.pgprog.controllers;
 
-import au.azzmosphere.pgprog.challengers.ChallengeInterface;
-import au.azzmosphere.pgprog.challengers.MorseCodeTranslater;
-import au.azzmosphere.pgprog.models.MorseCodeModel;
+import au.azzmosphere.pgprog.challengers.adriann.MorseCodeTranslater;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

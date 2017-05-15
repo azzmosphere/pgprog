@@ -5,6 +5,10 @@ import au.azzmosphere.pgprog.challengers.ChallengeInterface;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Created by aaron.spiteri on 14/5/17.
@@ -19,19 +23,62 @@ import java.util.List;
  */
 public class OddNumberChallenge implements ChallengeInterface {
     private List<Integer> numbers = new ArrayList<>();
+    private HashMap<String, Integer> rv = new HashMap<>();
+
+    private final Logger logger = LoggerFactory.getLogger(OddNumberChallenge.class);
 
     @Override
     public void putInput(HashMap inputMap) {
+        String numberArrayString = (String) inputMap.get("numberarray");
+        String[] numberArray = numberArrayString.split("( +|\\n)");
 
+        for (String n : numberArray) {
+            Integer k;
+
+            try {
+                k = Integer.valueOf(n);
+            }
+            catch (NumberFormatException e) {
+
+                // Skip this line.
+                logger.warn("'" + n + "' is not a positive integer, going to skip " + e.getMessage());
+                continue;
+            }
+            numbers.add(k);
+        }
     }
 
     @Override
     public void process() throws Exception {
+        HashMap<Integer, Integer> instanceCount = new HashMap<>();
 
+        for (Integer i : numbers) {
+            if (instanceCount.containsKey(i)) {
+                instanceCount.put(i, instanceCount.get(i).intValue() + 1);
+            }
+            else {
+                instanceCount.put(i, 1);
+            }
+        }
+
+        Iterator it = instanceCount.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            if ((((Integer) pair.getValue()) % 2) != 0) {
+                rv.put("answer", (Integer) pair.getKey());
+                break;
+            }
+        }
     }
 
     @Override
     public HashMap returnValues() {
-        return null;
+        return rv;
+    }
+
+    @Override
+    public void reset() {
+        numbers = new ArrayList<>();
+        rv = new HashMap<>();
     }
 }

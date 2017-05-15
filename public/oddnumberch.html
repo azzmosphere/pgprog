@@ -17,7 +17,7 @@ $(document).ready(function() {
                 },
                 dataType: 'json',
                 success: function (data) {
-                    $('#texttotranslate').val(data.texttranslated);
+                    $('#answer').html(data.answer);
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert("Status: " + textStatus); alert("Error: " + errorThrown);
@@ -47,13 +47,16 @@ $(document).ready(function() {
     Enter in a series of positive integers.
     <div id="el1">
 <textarea name="numberarray" rows="10" cols="30" id="numberarray">
-    2 5 9 1 5 1 8 2 8
 </textarea>
     </div>
 
     <button id="process" type="button">Click Me!</button>
     </p>
 
+    <p>
+        The output is:
+        <p id="answer"></p>
+    </p>
     <p onclick="writeContent('/index.html')">back</p>
 </div>
 

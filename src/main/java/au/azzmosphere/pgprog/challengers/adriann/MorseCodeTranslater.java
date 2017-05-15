@@ -1,8 +1,10 @@
-package au.azzmosphere.pgprog.challengers;
+package au.azzmosphere.pgprog.challengers.adriann;
 
 import java.util.HashMap;
-import au.azzmosphere.pgprog.challengers.morsecodetranslater.translaters.Translator;
-import au.azzmosphere.pgprog.challengers.morsecodetranslater.translaters.factories.TranslatorFactory;
+
+import au.azzmosphere.pgprog.challengers.ChallengeInterface;
+import au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.translaters.Translator;
+import au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.translaters.factories.TranslatorFactory;
 
 /**
  * Created by aaron.spiteri on 14/5/17.
@@ -33,5 +35,12 @@ public class MorseCodeTranslater implements ChallengeInterface {
     @Override
     public HashMap returnValues() {
         return output;
+    }
+
+    @Override
+    public void reset() {
+        textin = null;
+        output = new HashMap<>();
+        ttype = null;
     }
 }
