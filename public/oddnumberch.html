@@ -8,22 +8,20 @@
 
 <script >
 $(document).ready(function() {
-        $('#process').click(function () {
-            $.ajax({
-                url: '/oddnumberchallenge',
-                type: "POST",
-                data: {
-                    numberarray : $('#numberarray').val(),
-                },
-                dataType: 'json',
-                success: function (data) {
-                    $('#answer').html(data.answer);
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    alert("Status: " + textStatus); alert("Error: " + errorThrown);
-                }
-            });
-        });
+
+        function currentFormValues() {
+            return {
+                numberarray : $('#numberarray').val()
+            };
+        }
+        singleValueCreateProcessTrigger('/oddnumberchallenge',
+
+           function () {
+                return {
+                    numberarray : $('#numberarray').val()
+                };
+            }
+        );
 });
     </script>
 

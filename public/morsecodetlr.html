@@ -7,24 +7,19 @@
 </head>
 <body>
 <script >
+
 $(document).ready(function() {
-        $('#translate').click(function () {
-            $.ajax({
-                url: '/morsecode',
-                type: "POST",
-                data: {
-                    texttotranslate : $('#texttotranslate').val(),
-                    ttype           : $('#ttype').val()
-                },
-                dataType: 'json',
-                success: function (data) {
-                    $('#texttotranslate').val(data.texttranslated);
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    alert("Status: " + textStatus); alert("Error: " + errorThrown);
-                }
-            });
-        });
+    createProcessTrigger('#translate', '/morsecode',
+        function (data) {
+            $('#texttotranslate').val(data.texttranslated);
+        },
+        function () {
+            return {
+                texttotranslate : $('#texttotranslate').val(),
+                ttype           : $('#ttype').val()
+            };
+        }
+     );
 });
     </script>
     <h2>Morse Code Translator</h2>
