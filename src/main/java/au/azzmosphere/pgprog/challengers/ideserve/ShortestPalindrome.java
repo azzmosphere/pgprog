@@ -39,10 +39,11 @@ public class ShortestPalindrome implements ChallengeInterface {
 
             if (isPalindrome(palindromeString)) {
                 logger.debug("sub palindrome string " + palindromeString + " found");
-                this.palindromeString = postString + this.palindromeString;
                 break;
             }
         }
+
+        this.palindromeString = postString + this.palindromeString;
     }
 
     @Override
