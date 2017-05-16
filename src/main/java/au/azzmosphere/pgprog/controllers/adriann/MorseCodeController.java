@@ -1,6 +1,7 @@
-package au.azzmosphere.pgprog.controllers;
+package au.azzmosphere.pgprog.controllers.adriann;
 
 import au.azzmosphere.pgprog.challengers.adriann.MorseCodeTranslater;
+import au.azzmosphere.pgprog.controllers.ControllerBase;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,7 +19,7 @@ import java.util.HashMap;
  */
 @Controller
 
-public class MorseCodeController extends  ControllerBase {
+public class MorseCodeController extends ControllerBase {
 
     public MorseCodeController() {
         setChallenge(new MorseCodeTranslater());

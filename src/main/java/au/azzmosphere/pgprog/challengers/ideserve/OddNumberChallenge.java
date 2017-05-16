@@ -10,6 +10,8 @@ import org.slf4j.LoggerFactory;
 import java.util.Iterator;
 import java.util.Map;
 
+import static au.azzmosphere.pgprog.models.strings.StringToIntList.createIntegerList;
+
 /**
  * Created by aaron.spiteri on 14/5/17.
  *
@@ -30,23 +32,7 @@ public class OddNumberChallenge implements ChallengeInterface {
 
     @Override
     public void putInput(HashMap inputMap) {
-        String numberArrayString = (String) inputMap.get("numberarray");
-        String[] numberArray = numberArrayString.split("( +|\\n)");
-
-        for (String n : numberArray) {
-            Integer k;
-
-            try {
-                k = Integer.valueOf(n);
-            }
-            catch (NumberFormatException e) {
-
-                // Skip this line.
-                logger.warn("'" + n + "' is not a positive integer, going to skip " + e.getMessage());
-                continue;
-            }
-            numbers.add(k);
-        }
+        numbers = createIntegerList((String) inputMap.get("numberarray") );
     }
 
     @Override
