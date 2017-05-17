@@ -16,8 +16,7 @@ function createProcessTrigger(buttonName, urlString, successMethod, dataMethod) 
             $.ajax({
                 url: urlString,
                 type: "POST",
-                data: data,
-                dataType: 'json',
+                data: {data : JSON.stringify(data)},
                 success: successMethod,
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert("Status: " + textStatus); alert("Error: " + errorThrown);
