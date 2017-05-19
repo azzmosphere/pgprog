@@ -15,7 +15,7 @@ public class StringToIntList {
         Logger logger = LoggerFactory.getLogger(StringToIntList.class);
         List<Integer> numbers = new ArrayList<>();
 
-        String[] numberArray = s.split("( +|\\n)");
+        String[] numberArray = s.split("( +|\\n|,)");
 
         for (String n : numberArray) {
             Integer k;

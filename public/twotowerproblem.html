@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two Tower Problem</title>
+</head>
+<body>
+<script >
+$(document).ready(function() {
+        singleValueCreateProcessTrigger('/challenges/twotowerproblemctr', function () {
+              return {
+                inputString : $('#inputString').val()
+              };
+        });
+});
+    </script>
+
+<div id="description">
+    <h2>Two Tower Problem</h2>
+    <p>
+        We have an array where each element represents height of a tower. If it starts raining, what is the amount of water that can be collected between the towers? Assumption is that the width of every tower is 1.
+        <br />Example: <br />
+        Input  - {1,5,2,3,1,7,2,4}  <br />
+        Output - 11 <br />
+    </p>
+
+    <div id="el1">
+        Enter string s <br />
+
+        <textarea name="inputString" rows="10" cols="30" id="inputString">
+</textarea>
+    </div>
+
+    <button id="process" type="button">Click Me!</button>
+    </p>
+
+    <p>
+        The output is:
+    <p id="answer"></p>
+    </p>
+    <p onclick="writeContent('/index.html')">back</p>
+</div>
+</div>
+</body>
+</html>

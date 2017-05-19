@@ -4,6 +4,7 @@ import au.azzmosphere.pgprog.challengers.adriann.MorseCodeTranslater;
 import au.azzmosphere.pgprog.challengers.ideserve.MissingNumInDupArrays;
 import au.azzmosphere.pgprog.challengers.ideserve.OddNumberChallenge;
 import au.azzmosphere.pgprog.challengers.ideserve.ShortestPalindrome;
+import au.azzmosphere.pgprog.challengers.ideserve.TwoTowerProblem;
 import org.springframework.stereotype.Service;
 
 /**
@@ -23,6 +24,20 @@ public class ChallengeFactory {
      * to config or its own class.
      */
     private enum CHALLENGES implements Id2ChallengeMap {
+        TWO_TOWER_PROBLEM {
+            @Override
+            public ChallengeInterface challenge() {
+                return new TwoTowerProblem();
+            }
+
+            @Override
+            public boolean isChallenge(String id) {
+                if ("twotowerproblemctr".equals(id)) {
+                    return true;
+                }
+                return false;
+            }
+        },
         MORSE_CODE {
             @Override
             public ChallengeInterface challenge() {
