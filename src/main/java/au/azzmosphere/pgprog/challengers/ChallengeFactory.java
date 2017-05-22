@@ -96,7 +96,7 @@ public class ChallengeFactory {
         }
     }
 
-    public ChallengeInterface challenge(String id) {
+    public ChallengeInterface challenge(String id) throws Exception {
         for (CHALLENGES ch : CHALLENGES.values())  {
             if (ch.isChallenge(id)) {
                 return ch.challenge();

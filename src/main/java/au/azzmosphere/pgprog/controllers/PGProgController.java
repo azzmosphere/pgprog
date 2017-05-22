@@ -2,6 +2,8 @@ package au.azzmosphere.pgprog.controllers;
 
 import au.azzmosphere.pgprog.challengers.ChallengeFactory;
 import au.azzmosphere.pgprog.challengers.ChallengeInterface;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +22,7 @@ import java.util.HashMap;
 public class PGProgController {
     private ChallengeFactory challengeFactory;
     private ObjectMapper mapper = new ObjectMapper();
+    private Logger logger = LoggerFactory.getLogger(PGProgController.class);
 
     public ChallengeFactory getChallengeFactory() {
         return challengeFactory;
@@ -34,6 +37,7 @@ public class PGProgController {
     public final @ResponseBody
     HashMap process(@RequestParam(value="data") String data, @PathVariable("id") String id) {
 
+        logger.debug("processing challenge with id " + id);
         TypeReference<HashMap<String,Object>> typeRef
                 = new TypeReference<HashMap<String,Object>>() {};
 
@@ -47,6 +51,7 @@ public class PGProgController {
             rv = challenge.returnValues();
         }
         catch (Exception e) {
+            logger.error("while processing " + id + " :" + e.getMessage());
             if (rv == null) {
                 rv = new HashMap<>();
             }

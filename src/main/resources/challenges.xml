@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<challenges>
+    <challenge>
+        <id>shortestpalindromectl</id>
+        <heading>Shortest Palindrom</heading>
+        <title>Shortest Palindrom</title>
+        <endpoint>shortestpalindromectl</endpoint>
+        <description>
+            Given a string s, form a shortest palindrome by appending characters at the start of the string. <br />
+            Example: abab => babab. abcd => dcbabcd. ananab    => bananab.
+        </description>
+        <clazz>au.azzmosphere.pgprog.challengers.ideserve.ShortestPalindrome</clazz>
+        <view>singleargument.html</view>
+    </challenge>
+
+    <challenge>
+        <id>twotowerproblemctr</id>
+        <heading>Two Tower Problem</heading>
+        <title>Two Tower Problem</title>
+        <endpoint>twotowerproblemctr</endpoint>
+        <description>
+            We have an array where each element represents height of a tower. If it starts raining, what is the amount of water that can be collected between the towers? Assumption is that the width of every tower is 1.
+            <br />Example: <br />
+            Input  - {1,5,2,3,1,7,2,4}  <br />
+            Output - 11 <br />
+        </description>
+        <clazz>au.azzmosphere.pgprog.challengers.ideserve.TwoTowerProblem</clazz>
+        <view>singleargument.html</view>
+    </challenge>
+
+    <challenge>
+        <id>oddnumberchallenge</id>
+        <heading>Odd Numbe Challenge</heading>
+        <title>Odd Numbe Challenge</title>
+        <endpoint>oddnumberchallenge</endpoint>
+        <description>
+            In an array having positive integers, except for one number which occurs odd number of times, all other numbers occur even number of times. Find the number.
+            <br />
+            Example -
+            <br />
+            Input : 2 5 9 1 5 1 8 2 8
+            <br />
+            Output: 9
+            <br />
+            Input : 2 3 4 3 1 4 5 1 4 2 5
+            <br />
+            Output: 4
+        </description>
+        <clazz>au.azzmosphere.pgprog.challengers.ideserve.OddNumberChallenge</clazz>
+        <view>singleargument.html</view>
+    </challenge>
+</challenges>
