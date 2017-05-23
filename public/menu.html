@@ -6,11 +6,13 @@
 </head>
 <body>
 
-<a onclick="writeContent('/morsecodetlr.html');" class="clink">1. Morse code challenge</a>
-<p onclick="writeContent('/oddnumberch.html');" class="clink">2. Odd numbers challenge</p>
-<p onclick="writeContent('/shortestpalindrome.html');" class="clink">3. Shortest Palindrome</p>
-<p onclick="writeContent('/missingnuminduparray.html');" class="clink">4. Missing number in duplicate array</p>
-<p onclick="writeContent('/twotowerproblem.html');" class="clink">5. Two Tower Problem</p>
+<script>
+    $(document).ready(function() {
+       generateMenu();
+    });
+</script>
+
+<div id="mainmenu"> </div>
 
 </body>
 </html>

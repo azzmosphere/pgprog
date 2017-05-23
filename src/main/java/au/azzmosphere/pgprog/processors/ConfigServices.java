@@ -10,6 +10,9 @@ import org.springframework.stereotype.Component;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Schema;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,12 +33,21 @@ public class ConfigServices {
     private ChallengeConfigRoot challenges;
 
     /**
-     * list all challenges.
-     *
+     * return a list of Challenge ID's
      * @return
      */
-    public ChallengeConfigRoot listChalenges() {
-        return challenges;
+    public List<HashMap<String, String>> listChallengeId() {
+        ArrayList<HashMap<String, String>> list = new ArrayList<>();
+
+        for (ChallengeConfig challenge : challenges.getChalenge()) {
+            HashMap<String, String> hashMap = new HashMap<>();
+            hashMap.put("id", challenge.getId());
+            hashMap.put("title", challenge.getTitle());
+            hashMap.put("view", challenge.getView());
+            list.add(hashMap);
+        }
+
+        return list;
     }
 
     /**
@@ -45,7 +57,7 @@ public class ConfigServices {
      * @return
      */
     public ChallengeConfig findChallenge(String id) {
-        for (ChallengeConfig challenge : listChalenges().getChalenge()) {
+        for (ChallengeConfig challenge : challenges.getChalenge()) {
             if (challenge.getId().equals(id)) {
                 return challenge;
             }

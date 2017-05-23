@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by aaron.spiteri on 22/5/17.
@@ -25,14 +26,8 @@ public class PGViewController {
 
     @RequestMapping(value = "/views/list", method = RequestMethod.GET)
     public final @ResponseBody
-    HashMap showList() {
-        HashMap<String, String> rv = new HashMap<>();
-
-        for (ChallengeConfig challenge : configServices.listChalenges().getChalenge()) {
-            rv.put(challenge.getId(), challenge.getTitle());
-        }
-
-        return rv;
+    List showList() {
+        return configServices.listChallengeId();
     }
 
     @RequestMapping(value = "/views/challenge/{id}", method = RequestMethod.GET)
