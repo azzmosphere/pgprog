@@ -13,7 +13,6 @@ public class MorseCodeTranslater implements ChallengeInterface {
     private String textin = null;
     private HashMap<String, String> output = new HashMap<>();
     private TranslatorFactory tfactory = new TranslatorFactory();
-    private Exception lastError;
     private TranslatorFactory.translatorTypes ttype = null;
 
     @Override
