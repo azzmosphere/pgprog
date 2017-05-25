@@ -1,85 +1,68 @@
-
-/**
- * Load a page to a specific DIV.
- */
-function loadPage(pagePart, pageToLoad) {
-    $(pagePart).load(pageToLoad);
-}
-
-function writeContent(pageToLoad) {
-    loadPage('#content', pageToLoad);
-}
-
-
 /**
  * sends a request a for the main menu
  */
 function generateMenu() {
-//    var DIV_POINT = "#content";
-//    $.ajax({
-//        url: 'views/list',
-//        type: "GET",
-//        success: function (data) {
-//            $.each(data, function (index, item) {
-//                $(DIV_POINT).html(
-//                    $(DIV_POINT.html() +
-//                        "<p <a onclick=\"createChallengeView('" + item.view + "','" + item.id +"');\" class=\"clink\">"
-//                        + item.title +
-//                        "</p>"
-//                );
-//            });
-//        }
-//    });
+    var firstSelected = false;
+    $.ajax({
+        url:  '/views/list',
+        type: 'GET',
+        success: function (data) {
+            $.each(data, function (index, item) {
+                if (!firstSelected) {
+                    firstSelected = true;
+                    (getChallenge(item.id))();
+                }
+                var aTag = createAnchor($('#challengemenu'), item.heading);
+                aTag.onclick = getChallenge(item.id);
+            });
+        }
+    });
 }
-//
-//function createChallengeView(view, id) {
-//    var urlString = '/challenges/' + id;
-//    $.when(
-//        writeContent('/' + view),
-////        singleValueCreateProcessTrigger(urlString, function () {
-////            return {
-////                inputString : $('#inputString').val()
-////            };
-////         }),
-//         function () {
-//            $.ajax({
-//                    url: '/views/challenge/' + id,
-//                    type: 'GET',
-//                    success: function(data) {
-//                    $('#cheading').html(data.challenge.heading);
-//                    $('#cdescription').html(data.challenge.description);
-//                }
-//            });
-//         }
-//    ).done(function (){
-//        console.log("challenge view created with id : " + id ", view : " + view );
-//     });
-//}
-//
-////function createProcessTrigger(buttonName, urlString, successMethod, dataMethod) {
-////        $(buttonName).click(function () {
-////            var data = dataMethod();
-////            $.ajax({
-////                url: urlString,
-////                type: "POST",
-////                data: {data : JSON.stringify(data)},
-////                success: successMethod,
-////                error: function(XMLHttpRequest, textStatus, errorThrown) {
-////                    alert("Status: " + textStatus); alert("Error: " + errorThrown);
-////                }
-////            });
-////        });
-////}
-////
-////function buttonPressed() {
-////    var canswer
-////}
-////
-////function singleValueCreateProcessTrigger(urlString, dataMethod) {
-////    createProcessTrigger('#process', urlString, function (data) {
-////        alert('test');
-////    }, dataMethod);
-////}
-////
-//
+
+/**
+ * Create anchor and add it to a div
+ */
+function createAnchor(divObject,  linkText) {
+    var aTag = document.createElement('a');
+    aTag.innerHTML = linkText;
+    divObject.append(aTag);
+    return aTag;
+}
+
+function getChallenge(id) {
+    return function () {
+        $.ajax({
+            url: '/views/challenge/' + id,
+            type: 'GET',
+            success: function (data) {
+                $('#description').html(data.challenge.description);
+                $('#subheader').html(data.challenge.heading);
+                $('#process').click(createChallengeProcessor(id));
+            },
+            error: function () {
+                alert("could not configure challenge " + id);
+            }
+
+        });
+
+    }
+}
+
+function createChallengeProcessor(id) {
+    return function() {
+        $.ajax({
+            url: '/challenges/' + id,
+            type: 'POST',
+            data: {
+                data : JSON.stringify({inputString : $('#inputString').val()})
+            },
+            success: function(data) {
+                $('#outputString').html(data.outputString);
+            },
+            error : function(data) {
+                alert("ERROR: " + data.responseJSON.error + ":" + data.responseJSON.message);
+            }
+        });
+    }
+}
 

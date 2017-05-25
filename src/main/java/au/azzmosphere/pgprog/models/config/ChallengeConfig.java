@@ -8,10 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 public class ChallengeConfig {
     private String id;      // ID
     private String heading; // Heading used in view
-    private String title;   // title used in view
-    private String endPoint;    // web interception end point.
     private String description; // Description used in view
-    private String view;        // view to use
     private String clazz;       // challenger class to use.
 
     public String getId() {
@@ -32,24 +29,6 @@ public class ChallengeConfig {
         this.heading = heading;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    @XmlElement
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getEndPoint() {
-        return endPoint;
-    }
-
-    @XmlElement
-    public void setEndPoint(String endPoint) {
-        this.endPoint = endPoint;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -57,15 +36,6 @@ public class ChallengeConfig {
     @XmlElement
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getView() {
-        return view;
-    }
-
-    @XmlElement
-    public void setView(String view) {
-        this.view = view;
     }
 
     public String getClazz() {

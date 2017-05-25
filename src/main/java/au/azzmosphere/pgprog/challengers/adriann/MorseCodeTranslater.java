@@ -18,7 +18,7 @@ public class MorseCodeTranslater implements ChallengeInterface {
 
     @Override
     public void putInput(HashMap inputMap) {
-        textin = (String) inputMap.get("texttotranslate");
+        textin = (String) inputMap.get("inputString");
         for (TranslatorFactory.translatorTypes ttype : TranslatorFactory.translatorTypes.values()) {
             if ( ((String) inputMap.get("ttype")).equals(ttype.name())) {
                 this.ttype = ttype;
@@ -29,7 +29,7 @@ public class MorseCodeTranslater implements ChallengeInterface {
     @Override
     public void process() throws Exception {
         Translator translator = tfactory.findTranslator(ttype);
-        output.put("texttranslated", translator.translate(textin));
+        output.put("outputString", translator.translate(textin));
     }
 
     @Override

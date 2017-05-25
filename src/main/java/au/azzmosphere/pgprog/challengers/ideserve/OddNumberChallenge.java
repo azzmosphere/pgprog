@@ -32,7 +32,7 @@ public class OddNumberChallenge implements ChallengeInterface {
 
     @Override
     public void putInput(HashMap inputMap) {
-        numbers = createIntegerList((String) inputMap.get("numberarray") );
+        numbers = createIntegerList((String) inputMap.get("inputString") );
     }
 
     @Override
@@ -52,7 +52,7 @@ public class OddNumberChallenge implements ChallengeInterface {
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry)it.next();
             if ((((Integer) pair.getValue()) % 2) != 0) {
-                rv.put("answer", (Integer) pair.getKey());
+                rv.put("outputString", (Integer) pair.getKey());
                 break;
             }
         }

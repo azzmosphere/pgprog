@@ -35,13 +35,13 @@ public class PGProgController {
 
     @RequestMapping(value = "/challenges/{id}", method = RequestMethod.POST)
     public final @ResponseBody
-    HashMap process(@RequestParam(value="data") String data, @PathVariable("id") String id) {
+    HashMap process(@RequestParam(value="data") String data, @PathVariable("id") String id) throws Exception {
 
         logger.debug("processing challenge with id " + id);
         TypeReference<HashMap<String,Object>> typeRef
                 = new TypeReference<HashMap<String,Object>>() {};
 
-        HashMap rv = null;
+        HashMap rv;
         try {
             HashMap input = mapper.readValue(data, typeRef);
             ChallengeInterface challenge = challengeFactory.challenge(id);
@@ -52,10 +52,7 @@ public class PGProgController {
         }
         catch (Exception e) {
             logger.error("while processing " + id + " :" + e.getMessage());
-            if (rv == null) {
-                rv = new HashMap<>();
-            }
-            rv.put("lastError", "ERROR: " + e.getMessage());
+            throw e;
         }
         return rv;
     }

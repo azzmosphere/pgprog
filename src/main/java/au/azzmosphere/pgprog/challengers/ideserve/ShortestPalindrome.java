@@ -49,7 +49,7 @@ public class ShortestPalindrome implements ChallengeInterface {
     @Override
     public HashMap returnValues() {
         HashMap<String, String> rv = new HashMap<>();
-        rv.put("answer", palindromeString);
+        rv.put("outputString", palindromeString);
         return rv;
     }
 

@@ -7,17 +7,8 @@
                         <xs:sequence>
                             <xs:element type="xs:string" name="id"/>
                             <xs:element type="xs:string" name="heading"/>
-                            <xs:element type="xs:string" name="title"/>
-                            <xs:element type="xs:string" name="endpoint"/>
-                            <xs:element name="description">
-                                <xs:complexType mixed="true">
-                                    <xs:sequence>
-                                        <xs:element type="xs:string" name="br" maxOccurs="unbounded" minOccurs="0"/>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
+                            <xs:element type ="xs:string" name="description" />
                             <xs:element type="xs:string" name="clazz" />
-                            <xs:element type="xs:string" name="view" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>

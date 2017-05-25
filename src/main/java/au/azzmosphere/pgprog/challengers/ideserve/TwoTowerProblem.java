@@ -54,7 +54,7 @@ public class TwoTowerProblem implements ChallengeInterface {
     @Override
     public void process() throws Exception {
         findLargestNodes();
-        rv.put("answer", volume(maxVolume()));
+        rv.put("outputString", volume(maxVolume()));
     }
 
     @Override

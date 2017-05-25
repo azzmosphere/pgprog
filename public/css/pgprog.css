@@ -1,11 +1,68 @@
+/* line 3, ../../src/main/scss/_base.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, ../../src/main/scss/pgprog.scss */
 body {
   font: 100% Arial;
   color: #333;
-  font-size: 12px; }
+  font-size: 12px;
+}
 
-.clink a {
-  color: #333; }
-  .clink a:onmouseover {
-    color: #262626; }
+/* line 15, ../../src/main/scss/pgprog.scss */
+.grid {
+  background: white;
+  margin: 0 0 20px 0;
+}
+/* line 19, ../../src/main/scss/pgprog.scss */
+.grid:after {
+  /* Or @extend clearfix */
+  content: "";
+  display: table;
+  clear: both;
+}
 
-/*# sourceMappingURL=data:application/json;base64,ewoJInZlcnNpb24iOiAzLAoJImZpbGUiOiAicHVibGljL2Nzcy9wZ3Byb2cuY3NzIiwKCSJzb3VyY2VzIjogWwoJCSJzcmMvbWFpbi9zY3NzL2lucHV0LnNjc3MiLAoJCSJzcmMvbWFpbi9zY3NzL2lucHV0LnNjc3MvSlNBU1NfQ1VTVE9NLnNjc3MiCgldLAoJIm5hbWVzIjogW10sCgkibWFwcGluZ3MiOiAiQUFXQSxBQUFBLElBQUksQ0FBQztFQUNILElBQUksRUFBRSxJQUFJLENBWkcsS0FBSztFQWFsQixLQUFLLEVBWlMsSUFBSTtFQWFsQixTQUFTLEVBWkMsSUFBSSxHQWFmOztBQUVELEFBQ0ksTUFERSxDQUNGLENBQUMsQ0FBQztFQWJGLEtBQUssRUFKTyxJQUFJLEdBbUJmO0VBSEwsQUFDSSxNQURFLENBQ0YsQ0FBQyxBQVpELFlBQWEsQ0FBQztJQUNSLEtBQUssRUFBRSxPQUFzQixHQUNsQyIKfQ== */
+/* line 27, ../../src/main/scss/pgprog.scss */
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+}
+/* line 30, ../../src/main/scss/pgprog.scss */
+.grid [class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+/* line 34, ../../src/main/scss/pgprog.scss */
+.col-1 {
+  width: 30%;
+}
+
+/* line 37, ../../src/main/scss/pgprog.scss */
+.col-2 {
+  width: 70%;
+}
+
+/* Opt-in outside padding */
+/* line 42, ../../src/main/scss/pgprog.scss */
+.grid-pad {
+  padding: 20px 0 20px 20px;
+}
+/* line 44, ../../src/main/scss/pgprog.scss */
+.grid-pad [class*='col-']:last-of-type {
+  padding-right: 20px;
+}
+
+/* line 52, ../../src/main/scss/pgprog.scss */
+a, a:active, a:hover, a:visited {
+  color: red;
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+/* line 57, ../../src/main/scss/pgprog.scss */
+a:active, a:hover {
+  color: blue;
+}

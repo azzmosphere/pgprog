@@ -9,44 +9,38 @@
 </head>
 <body>
 <script>
-//$(document).ready(function() {
-//    generateMenu();
-//});
+$(document).ready(function() {
+    generateMenu();
+});
 </script>
 <div id="outer">
     <div id="header">
         <h1>Programming Challenges 1.1</h1>
 
-        <div id="challengemenu">
-            <a>item 1</a>
-            <a>item 2</a>
-            <a>item 3</a>
-            <a>item 4</a>
-        </div>
+        <div id="challengemenu"> </div>
 
         <h2 id="subheader">Sub Header</h2>
     </div>
     <div id="content">
 
 
-        <div id="description">
+        <div id="description" class="col-1"> </div>
+
+        <div id="challengeform" class="col-2">
             <p>
-                Lorem ipsum dolor sit amet, sed id mazim legere. Nullam persius deleniti vis ea. Putant quodsi ullamcorper an per, id nec utinam eleifend. Id eam mundi clita ignota, est erant minimum corrumpit ut. Ex has noster nonumes iracundia, cibo invidunt ea nam. Quem quis mei cu, his cu audiam ceteros apeirian.
+                <textarea name="inputString" rows="10" cols="30" id="inputString"></textarea>
+            </p>
+            <p>
+                <button id="process" type="button">Click Me!</button>
+            </p>
+            <p>
+                <textarea name="outputString" rows="10" cols="30" id="outputString" disabled></textarea>
             </p>
         </div>
+
     </div>
 
-   <div id="challengeform">
-       <p>
-           <textarea name="inputString" rows="10" cols="30" id="inputString"></textarea>
-       </p>
-       <p>
-           <button id="process" type="button">Click Me!</button>
-       </p>
-       <p>
-           <textarea name="outputString" rows="10" cols="30" id="outputString" disabled></textarea>
-       </p>
-   </div>
+
 </div>
 </body>
 </html>

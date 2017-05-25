@@ -2,10 +2,13 @@ buildscript {
     repositories {
         mavenLocal()
         mavenCentral()
+        jcenter()
+        maven { url "http://dl.bintray.com/robfletcher/gradle-plugins" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
         classpath 'com.github.fgiannesini.libsass.gradle.plugin:libsass-gradle-plugin:+'
+        classpath "com.github.robfletcher:compass-gradle-plugin:+"
     }
 }
 
@@ -16,6 +19,7 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'com.github.fgiannesini.libsass.gradle.plugin'
+apply plugin: "com.github.robfletcher.compass"
 
 jar {
     baseName = 'gs-actuator-service'
@@ -36,12 +40,18 @@ dependencies {
     testCompile("junit:junit")
 }
 
+compass {
+    cssDir = file("public/css")
+    sassDir = file("src/main/scss")
+}
+
 //Relative paths from resources can be used if target directory already exists, otherwise absolute path from project root should be used.
+// use compassCompile instead of Sass plugin.
 libSassParameters {
     //Type: String Mandatory
     //File path to compile (normally import other scss files)
     //Can be overridden for production task
-    inputFilePath = "src/main/scss/input.scss"
+    inputFilePath = "src/main/scss/pgprog.scss"
 
     //Type: String Mandatory
     //Compiled file path

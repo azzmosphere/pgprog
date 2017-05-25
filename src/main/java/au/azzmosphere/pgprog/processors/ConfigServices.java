@@ -42,8 +42,7 @@ public class ConfigServices {
         for (ChallengeConfig challenge : challenges.getChalenge()) {
             HashMap<String, String> hashMap = new HashMap<>();
             hashMap.put("id", challenge.getId());
-            hashMap.put("title", challenge.getTitle());
-            hashMap.put("view", challenge.getView());
+            hashMap.put("heading", challenge.getHeading());
             list.add(hashMap);
         }
 
