@@ -38,7 +38,7 @@ function getChallenge(id) {
                 $('#challengeform').load('/' + data.challenge.view, function () {
                     $('#description').html(data.challenge.description);
                     $('#subheader').html(data.challenge.heading);
-                    $('#process').click(createChallengeProcessor(id));
+                    $('#process').click(createChallengeProcessor(id, standardDataLoader));
                 });
             },
             error: function () {
@@ -50,14 +50,18 @@ function getChallenge(id) {
     }
 }
 
-function createChallengeProcessor(id) {
+function standardDataLoader() {
+    return {
+        data : JSON.stringify({inputString : $('#inputString').val()})
+    };
+}
+
+function createChallengeProcessor(id, dataLoader) {
     return function() {
         $.ajax({
             url: '/challenges/' + id,
             type: 'POST',
-            data: {
-                data : JSON.stringify({inputString : $('#inputString').val()})
-            },
+            data: dataLoader(),
             success: function(data) {
                 $('#outputString').html(data.outputString);
             },

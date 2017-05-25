@@ -19,7 +19,7 @@ public class MorseCodeTranslater implements ChallengeInterface {
     public void putInput(HashMap inputMap) {
         textin = (String) inputMap.get("inputString");
         for (TranslatorFactory.translatorTypes ttype : TranslatorFactory.translatorTypes.values()) {
-            if (((String) inputMap.get("ttype")).equals(ttype.name())) {
+            if ((inputMap.get("ttype")).equals(ttype.name())) {
                 this.ttype = ttype;
             }
         }

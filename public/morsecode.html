@@ -7,9 +7,17 @@
 <body>
 <script>
 $(document).ready(function() {
-    $('#processmorsecode').click(function () {
-        alert("This is overridden");
-    });
+    // Custom process function.
+    $('#processmorsecode').click(
+        createChallengeProcessor('morsecodetlr', function () {
+            return {
+                data : JSON.stringify({
+                    inputString : $('#inputString').val(),
+                    ttype       : $('#ttype').val()
+                })
+            };
+        })
+    );
 });
 </script>
 
@@ -19,7 +27,7 @@ $(document).ready(function() {
     <textarea name="inputString" rows="10" cols="30" id="inputString"></textarea>
 </p>
 <p>
-    <select name="ttype">
+    <select name="ttype" id="ttype">
         <option value="ENGLISH2MC">English to Morse Code</option>
         <option value="MCTOENGLISH">Morse Code to English</option>
     </select>
