@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Morse Code Translater</title>
+</head>
+<body>
+<script>
+$(document).ready(function() {
+    $('#processmorsecode').click(function () {
+        alert("This is overridden");
+    });
+});
+</script>
+
+<!-- create custom form -->
+
+<p>
+    <textarea name="inputString" rows="10" cols="30" id="inputString"></textarea>
+</p>
+<p>
+    <select name="ttype">
+        <option value="ENGLISH2MC">English to Morse Code</option>
+        <option value="MCTOENGLISH">Morse Code to English</option>
+    </select>
+
+    <!-- change the name of the button so that it does not conflict with the process button -->
+    <button id="processmorsecode" type="button">Click Me!</button>
+</p>
+<p>
+    <textarea name="outputString" rows="10" cols="30" id="outputString" disabled></textarea>
+</p>
+
+</body>
+</html>

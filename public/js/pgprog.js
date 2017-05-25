@@ -35,9 +35,11 @@ function getChallenge(id) {
             url: '/views/challenge/' + id,
             type: 'GET',
             success: function (data) {
-                $('#description').html(data.challenge.description);
-                $('#subheader').html(data.challenge.heading);
-                $('#process').click(createChallengeProcessor(id));
+                $('#challengeform').load('/' + data.challenge.view, function () {
+                    $('#description').html(data.challenge.description);
+                    $('#subheader').html(data.challenge.heading);
+                    $('#process').click(createChallengeProcessor(id));
+                });
             },
             error: function () {
                 alert("could not configure challenge " + id);

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <challenges>
+
+
     <challenge>
         <id>shortestpalindromectl</id>
         <heading>Shortest Palindrom</heading>
@@ -8,7 +10,7 @@
             Example: abab => babab. abcd => dcbabcd. ananab    => bananab.</p>
         ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.ideserve.ShortestPalindrome</clazz>
-        <view>index.html</view>
+        <view>standard.html</view>
     </challenge>
 
     <challenge>
@@ -21,7 +23,7 @@
             Output - 11 </p>
         ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.ideserve.TwoTowerProblem</clazz>
-        <view>index.html</view>
+        <view>standard.html</view>
     </challenge>
 
     <challenge>
@@ -41,6 +43,16 @@
             Output: 4</p>
            ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.ideserve.OddNumberChallenge</clazz>
-        <view>index.html</view>
+        <view>standard.html</view>
+    </challenge>
+
+    <challenge>
+        <id>morsecodetlr</id>
+        <heading>Morse Code Translater</heading>
+        <description> <![CDATA[
+            <p>Convert english to morse code and morse code to english</p>
+        ]]></description>
+        <clazz>au.azzmosphere.pgprog.challengers.adriann.MorseCodeTranslater</clazz>
+        <view>morsecode.html</view>
     </challenge>
 </challenges>
