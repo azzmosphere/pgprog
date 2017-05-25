@@ -12,10 +12,10 @@ public class PalindromeChecker {
      * @param s
      * @return
      */
-    public final static boolean isPalindrome(String s) {
+    public static final boolean isPalindrome(String s) {
         int x = s.length() / 2;
 
-        for (int i = 0; i < x; i ++) {
+        for (int i = 0; i < x; i++) {
             if (s.charAt(i) != s.charAt(s.length() - (i + 1))) {
                 return false;
             }

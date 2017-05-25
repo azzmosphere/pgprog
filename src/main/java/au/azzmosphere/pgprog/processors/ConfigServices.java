@@ -77,7 +77,7 @@ public class ConfigServices {
         try {
             readXMLProperties();
         }
-        catch(Exception e) {
+        catch (Exception e) {
             logger.error("unable to retrieve configuration.  Got error " + e.getMessage() + ": " + e.toString());
             throw e;
         }

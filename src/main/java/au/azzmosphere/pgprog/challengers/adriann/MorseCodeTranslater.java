@@ -10,16 +10,16 @@ import au.azzmosphere.pgprog.challengers.adriann.morsecodetranslater.translaters
  * Created by aaron.spiteri on 14/5/17.
  */
 public class MorseCodeTranslater implements ChallengeInterface {
-    private String textin = null;
+    private String textin;
     private HashMap<String, String> output = new HashMap<>();
     private TranslatorFactory tfactory = new TranslatorFactory();
-    private TranslatorFactory.translatorTypes ttype = null;
+    private TranslatorFactory.translatorTypes ttype;
 
     @Override
     public void putInput(HashMap inputMap) {
         textin = (String) inputMap.get("inputString");
         for (TranslatorFactory.translatorTypes ttype : TranslatorFactory.translatorTypes.values()) {
-            if ( ((String) inputMap.get("ttype")).equals(ttype.name())) {
+            if (((String) inputMap.get("ttype")).equals(ttype.name())) {
                 this.ttype = ttype;
             }
         }

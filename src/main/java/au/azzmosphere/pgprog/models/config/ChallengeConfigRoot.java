@@ -10,7 +10,7 @@ import java.util.List;
  * Created by aaron.spiteri on 21/5/17.
  */
 
-@XmlRootElement(name="challenges")
+@XmlRootElement(name = "challenges")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ChallengeConfigRoot {
     private List<ChallengeConfig> challenge;
@@ -19,7 +19,7 @@ public class ChallengeConfigRoot {
         return challenge;
     }
 
-    @XmlElement(name="challenge")
+    @XmlElement(name = "challenge")
     public void setChalenge(List<ChallengeConfig> challenge) {
         this.challenge = challenge;
     }

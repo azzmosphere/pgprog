@@ -19,7 +19,7 @@ import static au.azzmosphere.pgprog.models.strings.StringToIntList.createInteger
  */
 public class TwoTowerProblem implements ChallengeInterface {
     private ArrayList<Integer> towers;
-    private int t1 = 0, t2 = 0;
+    private int t1, t2;
     private HashMap<String, Integer> rv = new HashMap<>();
 
     public ArrayList<Integer> getTowers() {
@@ -80,8 +80,8 @@ public class TwoTowerProblem implements ChallengeInterface {
         int a1 = findIndexInArray((int) a[towers.size() - 1]),
                 a2 = findIndexInArray((int) a[towers.size() - 2]);
 
-        setT1( (a1 < a2) ? a1 : a2 );
-        setT2( (a1 > a2) ? a1 : a2);
+        setT1((a1 < a2) ? a1 : a2);
+        setT2((a1 > a2) ? a1 : a2);
     }
 
     /**
@@ -97,7 +97,7 @@ public class TwoTowerProblem implements ChallengeInterface {
     }
 
     private int findIndexInArray(int value) {
-        for (int i = 0;i < towers.size(); i ++) {
+        for (int i = 0; i < towers.size(); i++) {
             if (value == towers.get(i)) {
                 return i;
             }
@@ -115,7 +115,7 @@ public class TwoTowerProblem implements ChallengeInterface {
      */
     protected final int volume(int maxVolume) {
         int volume = maxVolume;
-        for (int i = (t1 + 1); i < t2; i ++) {
+        for (int i = (t1 + 1); i < t2; i++) {
             volume -= towers.get(i);
         }
 

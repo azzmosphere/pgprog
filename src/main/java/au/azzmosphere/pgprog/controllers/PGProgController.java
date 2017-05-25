@@ -34,12 +34,10 @@ public class PGProgController {
     }
 
     @RequestMapping(value = "/challenges/{id}", method = RequestMethod.POST)
-    public final @ResponseBody
-    HashMap process(@RequestParam(value="data") String data, @PathVariable("id") String id) throws Exception {
+    @ResponseBody public final HashMap process(@RequestParam(value = "data") String data, @PathVariable("id") String id) throws Exception {
 
         logger.debug("processing challenge with id " + id);
-        TypeReference<HashMap<String,Object>> typeRef
-                = new TypeReference<HashMap<String,Object>>() {};
+        TypeReference<HashMap<String, Object>> typeRef = new TypeReference<HashMap<String, Object>>() { };
 
         HashMap rv;
         try {

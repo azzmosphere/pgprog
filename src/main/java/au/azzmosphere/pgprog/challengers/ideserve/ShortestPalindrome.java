@@ -14,7 +14,7 @@ import static au.azzmosphere.pgprog.models.strings.PalindromeChecker.isPalindrom
  * Created by aaron.spiteri on 15/5/17.
  */
 public class ShortestPalindrome implements ChallengeInterface {
-    private String palindromeString = null;
+    private String palindromeString;
     private final Logger logger = LoggerFactory.getLogger(OddNumberChallenge.class);
 
     @Override
@@ -33,7 +33,7 @@ public class ShortestPalindrome implements ChallengeInterface {
 
         // check for sub palindrome.
         String postString = "";
-        for (int i = (palindromeString.length() - 1); i > 0; i --) {
+        for (int i = (palindromeString.length() - 1); i > 0; i--) {
             postString = postString + palindromeString.charAt(palindromeString.length() - 1);
             palindromeString = palindromeString.substring(0, palindromeString.length() - 1);
 

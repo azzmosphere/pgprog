@@ -386,12 +386,15 @@ public enum MCMapping implements MCMappingIface {
 
     SPACE_BETWEEN_LETTERS {
         @Override
-        public String toMC() {return "   ";}
+        public String toMC() {
+            return "   ";
+        }
 
         @Override
-        public char toAlpha() {return ' ';}
-    }
-    ;
+        public char toAlpha() {
+            return ' ';
+        }
+    };
 
     @Override
     public boolean isChar(char c) {

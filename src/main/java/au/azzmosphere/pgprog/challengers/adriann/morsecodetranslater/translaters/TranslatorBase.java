@@ -14,7 +14,7 @@ public abstract class TranslatorBase<T> implements Translator {
         int size = (Arrays.asList(words)).size(), i = 0;
 
         for (String word : words) {
-            i ++;
+            i++;
             String convertedWord = convert(word);
 
             // throw a exception if the word can not be converted.

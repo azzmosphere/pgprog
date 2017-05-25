@@ -10,6 +10,7 @@ public class ChallengeConfig {
     private String heading; // Heading used in view
     private String description; // Description used in view
     private String clazz;       // challenger class to use.
+    private String view;        // view to use, this would normally be index.html
 
     public String getId() {
         return id;
@@ -45,5 +46,14 @@ public class ChallengeConfig {
     @XmlElement
     public void setClazz(String clazz) {
         this.clazz = clazz;
+    }
+
+    @XmlElement
+    public void setView(String view) {
+        this.view = view;
+    }
+
+    public String getView() {
+        return view;
     }
 }

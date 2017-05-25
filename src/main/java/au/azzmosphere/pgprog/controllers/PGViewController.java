@@ -25,14 +25,12 @@ public class PGViewController {
     }
 
     @RequestMapping(value = "/views/list", method = RequestMethod.GET)
-    public final @ResponseBody
-    List showList() {
+    @ResponseBody public final List showList() {
         return configServices.listChallengeId();
     }
 
     @RequestMapping(value = "/views/challenge/{id}", method = RequestMethod.GET)
-    public final @ResponseBody
-    HashMap showChallenge(@PathVariable("id") String id) {
+    @ResponseBody public final HashMap showChallenge(@PathVariable("id") String id) {
         HashMap<String, ChallengeConfig> rv = new HashMap<>();
 
         rv.put("challenge", configServices.findChallenge(id));

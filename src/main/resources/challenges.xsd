@@ -9,6 +9,7 @@
                             <xs:element type="xs:string" name="heading"/>
                             <xs:element type ="xs:string" name="description" />
                             <xs:element type="xs:string" name="clazz" />
+                            <xs:element type="xs:string" name="view" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>

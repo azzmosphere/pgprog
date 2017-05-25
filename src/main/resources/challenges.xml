@@ -8,6 +8,7 @@
             Example: abab => babab. abcd => dcbabcd. ananab    => bananab.</p>
         ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.ideserve.ShortestPalindrome</clazz>
+        <view>index.html</view>
     </challenge>
 
     <challenge>
@@ -20,6 +21,7 @@
             Output - 11 </p>
         ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.ideserve.TwoTowerProblem</clazz>
+        <view>index.html</view>
     </challenge>
 
     <challenge>
@@ -39,5 +41,6 @@
             Output: 4</p>
            ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.ideserve.OddNumberChallenge</clazz>
+        <view>index.html</view>
     </challenge>
 </challenges>
