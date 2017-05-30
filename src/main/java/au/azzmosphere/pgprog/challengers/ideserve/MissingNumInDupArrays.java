@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.HashMap;
 
-import static au.azzmosphere.pgprog.models.strings.StringToIntList.createIntegerList;
+import static au.azzmosphere.pgprog.utilities.lists.strings.StringToIntList.createIntegerList;
 
 /**
  * Created by aaron.spiteri on 15/5/17.

@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Iterator;
 import java.util.Map;
 
-import static au.azzmosphere.pgprog.models.strings.StringToIntList.createIntegerList;
+import static au.azzmosphere.pgprog.utilities.lists.strings.StringToIntList.createIntegerList;
 
 /**
  * Created by aaron.spiteri on 14/5/17.

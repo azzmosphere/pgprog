@@ -1,8 +1,8 @@
-package au.azzmosphere.pgprog.models.strings;
+package au.azzmosphere.pgprog.utilities.lists.strings;
 
 import org.junit.Test;
 
-import static au.azzmosphere.pgprog.models.strings.PalindromeChecker.isPalindrome;
+import static au.azzmosphere.pgprog.utilities.lists.strings.PalindromeChecker.isPalindrome;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 

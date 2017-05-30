@@ -1,4 +1,4 @@
-package au.azzmosphere.pgprog.models.strings;
+package au.azzmosphere.pgprog.utilities.lists.strings;
 
 /**
  * Created by aaron.spiteri on 15/5/17.

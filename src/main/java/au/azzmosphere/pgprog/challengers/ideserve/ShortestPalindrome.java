@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 
-import static au.azzmosphere.pgprog.models.strings.PalindromeChecker.isPalindrome;
+import static au.azzmosphere.pgprog.utilities.lists.strings.PalindromeChecker.isPalindrome;
 /**
  * Given a string s, form a shortest palindrome by appending characters at the start of the string.
  * Example: abab => babab. abcd => dcbabcd. ananab    => bananab.

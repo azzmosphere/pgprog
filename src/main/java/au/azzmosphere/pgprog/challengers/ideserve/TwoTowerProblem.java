@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import static au.azzmosphere.pgprog.models.strings.StringToIntList.createIntegerList;
+import static au.azzmosphere.pgprog.utilities.lists.strings.StringToIntList.createIntegerList;
 
 /**
  * We have an array where each element represents height of a tower. If it starts raining,

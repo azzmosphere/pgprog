@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <challenges>
-
-
     <challenge>
         <id>shortestpalindromectl</id>
         <heading>Shortest Palindrom</heading>
@@ -54,5 +52,21 @@
         ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.adriann.MorseCodeTranslater</clazz>
         <view>morsecode.html</view>
+    </challenge>
+
+    <challenge>
+        <id>numofclusters</id>
+        <heading>Number Of Islands</heading>
+        <description> <![CDATA[
+            <p>Given a 2D matrix of 0s and 1s, find total number of clusters formed by elements with value 1.  For example, in the below shown 2D matrix there are total three such clusters. </p>
+            <p>For example go to <a href="http://www.ideserve.co.in/learn/number-of-clusters-of-1s">Number Of Clusters</a> <br />
+            1,0,1,0,1 <br/>
+1,1,0,0,0<br/>
+0,1,0,1,1
+            </p>
+            <p>This problem is also known as 'Number of Islands' problem.</p>
+        ]]></description>
+        <clazz>au.azzmosphere.pgprog.challengers.ideserve.NumOfClusters</clazz>
+        <view>standard.html</view>
     </challenge>
 </challenges>
