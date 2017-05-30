@@ -87,17 +87,12 @@ public class NumOfClusters implements ChallengeInterface {
             Cluster t = clusters.get(y);
 
             for (int x = 0; x < y; x++) {
-                boolean nodeFound = false;
                 for (Node n : clusters.get(x).getNodes()) {
                     if (t.checkNode(n)) {
                         t.mergeCluster(clusters.get(x));
                         clustersToRemove.add(x);
-                        nodeFound = true;
                         break;
                     }
-                }
-                if (nodeFound) {
-                    continue;
                 }
             }
         }
