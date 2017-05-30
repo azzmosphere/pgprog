@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class Cluster  {
 
-    private List<Node> nodes = new ArrayList();
+    private List<Node> nodes = new ArrayList<>();
 
     public List<Node> getNodes() {
         return nodes;
@@ -50,6 +50,23 @@ public class Cluster  {
     private boolean distanceCheck(int coordinate) {
         if (coordinate >= -1 && coordinate <= 1) {
             return true;
+        }
+        return false;
+    }
+
+    public void mergeCluster(Cluster o) {
+        for (Node n : o.getNodes()) {
+            if (!hasNode(n)) {
+                addNode(n);
+            }
+        }
+    }
+
+    private boolean hasNode(Node t) {
+        for (Node n : getNodes()) {
+            if (n.getX() == t.getX() && n.getY() == t.getY()) {
+                return true;
+            }
         }
         return false;
     }

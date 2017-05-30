@@ -17,6 +17,15 @@ import static au.azzmosphere.pgprog.utilities.lists.strings.StringTo2DIntList.cr
 public class NumOfClusters implements ChallengeInterface {
     private List<List<Integer>> list;
     private static final Logger logger = LoggerFactory.getLogger(ChallengeInterface.class);
+
+    public List<Cluster> getClusters() {
+        return clusters;
+    }
+
+    public void setClusters(List<Cluster> clusters) {
+        this.clusters = clusters;
+    }
+
     private List<Cluster> clusters = new ArrayList<>();
 
     @Override
@@ -56,6 +65,7 @@ public class NumOfClusters implements ChallengeInterface {
                 }
             }
         }
+        prunClusters();
     }
 
     @Override
@@ -69,6 +79,33 @@ public class NumOfClusters implements ChallengeInterface {
     public void reset() {
         list = new ArrayList<>();
         clusters = new ArrayList<>();
+    }
+
+    protected void prunClusters() {
+        List<Integer> clustersToRemove = new ArrayList<>();
+        for (int y = 1; y < clusters.size(); y ++) {
+            Cluster t = clusters.get(y);
+
+            for (int x = 0; x < y; x ++) {
+                boolean nodeFound = false;
+                for (Node n : clusters.get(x).getNodes()) {
+                    if (t.checkNode(n)) {
+                        t.mergeCluster(clusters.get(x));
+                        clustersToRemove.add(x);
+                        nodeFound = true;
+                        break;
+                    }
+                }
+                if (nodeFound) {
+                    continue;
+                }
+            }
+        }
+
+        logger.debug("found " + clustersToRemove.size() + " that can be pruned");
+        for (int x = clustersToRemove.size() - 1;x  >= 0; x--) {
+            clusters.remove(x);
+        }
     }
 }
 
