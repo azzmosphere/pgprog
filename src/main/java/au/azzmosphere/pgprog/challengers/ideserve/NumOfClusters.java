@@ -44,24 +44,18 @@ public class NumOfClusters implements ChallengeInterface {
         for (int y = 0; y < list.size(); y++) {
             List<Integer> row = list.get(y);
             for (int x = 0; x < row.size(); x++) {
+                outerloop:
                 if (row.get(x) > 0) {
                     Node node = new Node(x, y, row.get(x));
-                    boolean foundCluster = false;
                     for (Cluster cluster : clusters) {
                         if (cluster.checkNode(node)) {
-                            foundCluster = true;
                             cluster.addNode(node);
-                            continue;
-                        }
-                        if (foundCluster) {
-                            continue;
+                            break outerloop;
                         }
                     }
 
-                    if (!foundCluster) {
-                        clusters.add(new Cluster());
-                        clusters.get(clusters.size() - 1).addNode(node);
-                    }
+                    clusters.add(new Cluster());
+                    clusters.get(clusters.size() - 1).addNode(node);
                 }
             }
         }
