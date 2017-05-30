@@ -41,11 +41,11 @@ public class NumOfClusters implements ChallengeInterface {
 
     @Override
     public void process() throws Exception {
-        for (int y = 0;y < list.size(); y++) {
+        for (int y = 0; y < list.size(); y++) {
             List<Integer> row = list.get(y);
-            for (int x = 0;x < row.size(); x++) {
+            for (int x = 0; x < row.size(); x++) {
                 if (row.get(x) > 0) {
-                    Node node = new Node(x,y,row.get(x));
+                    Node node = new Node(x, y, row.get(x));
                     boolean foundCluster = false;
                     for (Cluster cluster : clusters) {
                         if (cluster.checkNode(node)) {
@@ -60,7 +60,7 @@ public class NumOfClusters implements ChallengeInterface {
 
                     if (!foundCluster) {
                         clusters.add(new Cluster());
-                        clusters.get(clusters.size() -1).addNode(node);
+                        clusters.get(clusters.size() - 1).addNode(node);
                     }
                 }
             }
@@ -83,10 +83,10 @@ public class NumOfClusters implements ChallengeInterface {
 
     protected void prunClusters() {
         List<Integer> clustersToRemove = new ArrayList<>();
-        for (int y = 1; y < clusters.size(); y ++) {
+        for (int y = 1; y < clusters.size(); y++) {
             Cluster t = clusters.get(y);
 
-            for (int x = 0; x < y; x ++) {
+            for (int x = 0; x < y; x++) {
                 boolean nodeFound = false;
                 for (Node n : clusters.get(x).getNodes()) {
                     if (t.checkNode(n)) {
@@ -103,7 +103,7 @@ public class NumOfClusters implements ChallengeInterface {
         }
 
         logger.debug("found " + clustersToRemove.size() + " that can be pruned");
-        for (int x = clustersToRemove.size() - 1;x  >= 0; x--) {
+        for (int x = clustersToRemove.size() - 1; x  >= 0; x--) {
             clusters.remove(x);
         }
     }
