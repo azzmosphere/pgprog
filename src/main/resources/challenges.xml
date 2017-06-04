@@ -9,6 +9,7 @@
         ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.ideserve.ShortestPalindrome</clazz>
         <view>standard.html</view>
+        <enabled>true</enabled>
     </challenge>
 
     <challenge>
@@ -22,6 +23,7 @@
         ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.ideserve.TwoTowerProblem</clazz>
         <view>standard.html</view>
+        <enabled>true</enabled>
     </challenge>
 
     <challenge>
@@ -42,6 +44,7 @@
            ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.ideserve.OddNumberChallenge</clazz>
         <view>standard.html</view>
+        <enabled>true</enabled>
     </challenge>
 
     <challenge>
@@ -52,6 +55,7 @@
         ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.adriann.MorseCodeTranslater</clazz>
         <view>morsecode.html</view>
+        <enabled>true</enabled>
     </challenge>
 
     <challenge>
@@ -68,5 +72,35 @@
         ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.ideserve.NumOfClusters</clazz>
         <view>standard.html</view>
+        <enabled>false</enabled>
+    </challenge>
+
+    <challenge>
+        <id>numofclustersIdeserve</id>
+        <heading>Number Of Islands (IDeserve Solution)</heading>
+        <description> <![CDATA[
+            <p>Given a 2D matrix of 0s and 1s, find total number of clusters formed by elements with value 1.  For example, in the below shown 2D matrix there are total three such clusters. </p>
+            <p>For example go to <a href="http://www.ideserve.co.in/learn/number-of-clusters-of-1s">Number Of Clusters</a> <br />
+            1,0,1,0,1 <br/>
+1,1,0,0,0<br/>
+0,1,0,1,1
+            </p>
+            <p>This problem is also known as 'Number of Islands' problem.</p>
+            <p>This solution is the published solution it is not my own</p>
+        ]]></description>
+        <clazz>au.azzmosphere.pgprog.challengers.ideserve.NumberOfClusters2</clazz>
+        <view>standard.html</view>
+        <enabled>true</enabled>
+    </challenge>
+
+    <challenge>
+        <id>reachsrcdestword</id>
+        <heading>Minimum number of trials to reach from source word to destination word</heading>
+        <description><![CDATA[
+					<p>Given a dictionary of words, find minimum number of trials to reach from source word to destination word. A valid trial on word 'w' is defined as either insert, delete or substitute operation of a single character in word 'w' which results in a word 'w1' which is also present in the given dictionary. For example, for dictionary {"BCCI","AICC","ICC","CCI","MCC","MCA", "ACC"}, minimum number of trials to reach from word "AICC" to "ICC" is 1. Only 1 opeartion of deleting character 'A' is required to reach from word "AICC" to word "ICC". Minimum number of trials to reach from "AICC" to "MCC" is 2(AICC->ICC->MCC) and minimum number of trials to reach from "AICC" to "MCA" is 3(AICC->ICC->MCC->MCA). <br><br>Now if you notice, there are no valid trials with source as "AICC" and destination as "BCCI" for above dictionary. Hence the output returned by program should be '-1' indicating destination word cannot be reached from source word.</p>
+        ]]></description>
+        <clazz>au.azzmosphere.pgprog.challengers.ideserve.MinReachSrcDestWord</clazz>
+        <view>standard.html</view>
+        <enabled>false</enabled>
     </challenge>
 </challenges>

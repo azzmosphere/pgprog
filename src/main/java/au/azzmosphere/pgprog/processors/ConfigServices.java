@@ -40,10 +40,12 @@ public class ConfigServices {
         ArrayList<HashMap<String, String>> list = new ArrayList<>();
 
         for (ChallengeConfig challenge : challenges.getChalenge()) {
-            HashMap<String, String> hashMap = new HashMap<>();
-            hashMap.put("id", challenge.getId());
-            hashMap.put("heading", challenge.getHeading());
-            list.add(hashMap);
+            if (challenge.getEnabled()) {
+                HashMap<String, String> hashMap = new HashMap<>();
+                hashMap.put("id", challenge.getId());
+                hashMap.put("heading", challenge.getHeading());
+                list.add(hashMap);
+            }
         }
 
         return list;

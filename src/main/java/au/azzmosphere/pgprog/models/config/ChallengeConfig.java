@@ -11,6 +11,7 @@ public class ChallengeConfig {
     private String description; // Description used in view
     private String clazz;       // challenger class to use.
     private String view;        // view to use, this would normally be index.html
+    private boolean enabled;    // if set to false challenge not available.
 
     public String getId() {
         return id;
@@ -55,5 +56,14 @@ public class ChallengeConfig {
 
     public String getView() {
         return view;
+    }
+
+    @XmlElement
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public boolean getEnabled() {
+        return enabled;
     }
 }

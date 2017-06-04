@@ -10,6 +10,7 @@
                             <xs:element type ="xs:string" name="description" />
                             <xs:element type="xs:string" name="clazz" />
                             <xs:element type="xs:string" name="view" />
+                            <xs:element type="xs:boolean" name="enabled" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
