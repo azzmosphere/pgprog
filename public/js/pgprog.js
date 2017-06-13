@@ -72,3 +72,15 @@ function createChallengeProcessor(id, dataLoader) {
     }
 }
 
+function createList(sin, listName) {
+    var s = $(sin).val();
+    var a = s.split(",");
+
+    for (var i = 0; i < a.length; i++) {
+        $(listName).append($("<option></option>")
+            .attr("value", i)
+            .text(a[i])
+        );
+    }
+}
+

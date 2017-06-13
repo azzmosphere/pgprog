@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minimum Trails To Reach Destination Word</title>
+</head>
+<body>
+
+<script>
+    $(document).ready(function() {
+        createList("#dictonary", "#startword");
+        createList("#dictonary", "#endword");
+
+
+        $('#processmintrial').click(
+            createChallengeProcessor('reachsrcdestword', function () {
+                return {
+                    data : JSON.stringify({
+                        dictonary : $('#dictonary').val(),
+                        startword : $('#startword').val(),
+                        endword   : $('#endword').val()
+                    })
+                };
+            })
+        );
+
+    });
+
+</script>
+
+<p>
+    <textarea name="dictonary" rows="5" cols="30" id="dictonary" disabled>BCCI,AICC,ICC,CCI,MCC,MCA,ACC</textarea> <br />
+
+    <select id="startword" /> <br />
+    <select id="endword" /> <br />
+
+    <p>
+    <button id="processmintrial" type="button">Click Me!</button></p>
+
+    <p>
+        <textarea name="outputString" rows="10" cols="30" id="outputString" disabled /> </p>
+
+</p>
+
+</body>
+</html>

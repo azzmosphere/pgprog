@@ -16,26 +16,26 @@ import static org.hamcrest.CoreMatchers.is;
 public class TestNumOfClusters {
     private NumOfClusters numOfClusters = new NumOfClusters();
 
-    @Test
-    public void testPrunClusters() {
-        Cluster cluster1 = new Cluster(),
-                cluster2 = new Cluster()
-        ;
-
-        Node n1 = new Node(0,0,1),
-                n2 = new Node(0,2,1),
-                n3 = new Node(0,1,1),
-                n4 = new Node(1,1,1)
-        ;
-
-        cluster1.setNodes(Arrays.asList(new Node[]{n1, n3, n4}));
-        cluster2.setNodes(Arrays.asList(new Node[]{n2}));
-
-        numOfClusters.setClusters(Arrays.asList(new Cluster[]{
-                cluster1, cluster2
-        }));
-        numOfClusters.prunClusters();
-
-        assertThat(numOfClusters.getClusters().size(), is(1));
-    }
+//    @Test
+//    public void testPrunClusters() {
+//        Cluster cluster1 = new Cluster(),
+//                cluster2 = new Cluster()
+//        ;
+//
+//        Node n1 = new Node(0,0,1),
+//                n2 = new Node(0,2,1),
+//                n3 = new Node(0,1,1),
+//                n4 = new Node(1,1,1)
+//        ;
+//
+//        cluster1.setNodes(Arrays.asList(new Node[]{n1, n3, n4}));
+//        cluster2.setNodes(Arrays.asList(new Node[]{n2}));
+//
+//        numOfClusters.setClusters(Arrays.asList(new Cluster[]{
+//                cluster1, cluster2
+//        }));
+//        numOfClusters.prunClusters();
+//
+//        assertThat(numOfClusters.getClusters().size(), is(1));
+//    }
 }
