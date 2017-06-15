@@ -1,4 +1,4 @@
-package u.azzmosphere.pgprog.challengers.ideserve;
+package au.azzmosphere.pgprog.challengers.ideserve;
 
 import au.azzmosphere.pgprog.challengers.ideserve.MinReachSrcDestWord;
 import org.junit.Before;

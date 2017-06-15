@@ -53,4 +53,10 @@ public class TestTrial {
         assertThat(trialSubstitute(w, w1), is(false));
 
     }
+
+    @Test
+    public void testTrialDelete2() {
+        String w = "AICC", w2 = "ACC";
+        assertThat(trialDelete(w, w2), is(true));
+    }
 }

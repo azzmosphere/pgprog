@@ -21,14 +21,11 @@ public class Trial {
             return false;
         }
 
-        if ((w1.substring(0, 1) + w).equals(w1)) {
-            return true;
+        for (int i = 0; i < w1.length(); i++) {
+            if ((w1.substring(0, i) + w1.substring(i + 1)).equals(w)) {
+                return true;
+            }
         }
-
-        if ((w + w1.substring(w1.length() - 1)).equals(w1)) {
-            return true;
-        }
-
         return false;
     }
 

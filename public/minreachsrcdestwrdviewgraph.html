@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Minimum Trails To Reach Destination Word</title>
+    <title>Minimum Trails To Reach Destination Word (Graph)</title>
 </head>
 <body>
 
@@ -10,8 +10,8 @@
     $(document).ready(function() {
         createList("#dictonary", "#startword");
         createList("#dictonary", "#endword");
-        linkButton('#processmintrial', 'reachsrcdestword');
-     )};
+        linkButton('#processmintrial', 'reachsrcdestwordgraph');
+    });
 </script>
 
 <p>
@@ -20,13 +20,13 @@
     <select id="startword" /> <br />
     <select id="endword" /> <br />
 
-    <p>
+<p>
     <button id="processmintrial" type="button">Click Me!</button></p>
 
-    <p>
-        <textarea name="outputString" rows="10" cols="30" id="outputString" disabled /> </p>
+<p>
+    <textarea name="outputString" rows="10" cols="30" id="outputString" disabled /> </p>
 
-    </p>
+</p>
 
 </body>
 </html>

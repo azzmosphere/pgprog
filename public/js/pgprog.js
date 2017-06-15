@@ -84,3 +84,17 @@ function createList(sin, listName) {
     }
 }
 
+function linkButton(divId, challengeId) {
+    $(divId).click(
+        createChallengeProcessor(challengeId, function () {
+            return {
+                data : JSON.stringify({
+                    dictonary : $('#dictonary').val(),
+                        startword : $('#startword').val(),
+                        endword   : $('#endword').val()
+                })
+            };
+        })
+    );
+ }
+

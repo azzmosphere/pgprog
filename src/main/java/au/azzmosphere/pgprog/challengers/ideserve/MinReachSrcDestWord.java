@@ -103,14 +103,6 @@ public class MinReachSrcDestWord implements ChallengeInterface {
         return null;
     }
 
-    protected ArrayList clone(ArrayList a1) {
-        ArrayList a2 = new ArrayList();
-        for (Object i : a1) {
-            a2.add(i);
-        }
-        return a2;
-    }
-
     protected boolean trialMatch(String s1, String s2) {
         if (trialInsert(s1, s2) || trialDelete(s1, s2) || trialSubstitute(s1, s2)) {
             return true;
