@@ -154,4 +154,22 @@
         <view>minreachsrcdestwrdviewgraph.html</view>
         <enabled>true</enabled>
     </challenge>
+
+    <challenge>
+        <id>latticepaths</id>
+        <heading>Lattice Paths - Problem 15</heading>
+        <description><![CDATA[
+            <p>Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down,
+               there are exactly 6 routes to the bottom right corner.</p>
+            <p>
+            <img src="https://projecteuler.net/project/images/p015.gif" alt="visual reprentation" />
+            </p>
+            <p>How many such routes are there through a 20×20 grid?</p>
+            <p>Example input 2x2</p>
+        ]]></description>
+        <clazz>au.azzmosphere.pgprog.challengers.projecteuler.LatticePaths</clazz>
+        <view>standard.html</view>
+        <enabled>true</enabled>
+    </challenge>
+
 </challenges>

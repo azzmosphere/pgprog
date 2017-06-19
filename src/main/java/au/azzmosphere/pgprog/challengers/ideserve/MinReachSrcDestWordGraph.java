@@ -1,6 +1,7 @@
 package au.azzmosphere.pgprog.challengers.ideserve;
 
 import au.azzmosphere.pgprog.challengers.ChallengeInterface;
+import au.azzmosphere.pgprog.processors.graph.DepthFirstTransverser;
 import au.azzmosphere.pgprog.utilities.graph.Node;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +17,7 @@ import static au.azzmosphere.pgprog.utilities.lists.Clone.cloneArray;
 /**
  * Created by aaron.spiteri on 13/6/17.
  */
-public class MinReachSrcDestWordGraph implements ChallengeInterface {
+public class MinReachSrcDestWordGraph extends DepthFirstTransverser implements ChallengeInterface {
     private Hashtable<Integer, Node<String>> nodeMap = new Hashtable<>();
     private static final Logger logger = LoggerFactory.getLogger(MinReachSrcDestWordGraph.class);
     private ArrayList<ArrayList<Node<String>>> foundPaths = new ArrayList<>();
@@ -111,34 +112,4 @@ public class MinReachSrcDestWordGraph implements ChallengeInterface {
         }
     }
 
-    /**
-     * Traverse the tree starting at startNode, add each path to foundPaths and only stop if
-     *   1) the path reaches a node that has been previously discovered.
-     *   2) the targetNode is found.
-     *
-     * if the target node is found then return true.
-     *
-     * @param startNode
-     * @param targetNode
-     * @param foundPaths
-     * @return
-     */
-    public boolean transverseMap(Node startNode, Node targetNode, ArrayList<ArrayList<Node<String>>> foundPaths, ArrayList<Node<String>> transversedPaths) {
-
-        if (transversedPaths.contains(startNode)) {
-            return false;
-        }
-
-        transversedPaths.add(startNode);
-        if (startNode.getId() == targetNode.getId()) {
-            foundPaths.add(transversedPaths);
-            return true;
-        }
-
-        for (Object e : startNode.allEdges()) {
-            Node n = (Node) e;
-            transverseMap(n, targetNode, foundPaths, cloneArray(transversedPaths));
-        }
-        return false;
-    }
 }
