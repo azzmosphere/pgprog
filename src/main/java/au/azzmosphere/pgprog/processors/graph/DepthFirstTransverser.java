@@ -9,7 +9,7 @@ import static au.azzmosphere.pgprog.utilities.lists.Clone.cloneArray;
 /**
  * Created by aaron.spiteri on 19/6/17.
  */
-public abstract class DepthFirstTransverser {
+public abstract class DepthFirstTransverser<T> {
     protected boolean checkNode(Node n1, Node n2) {
         return n1.getId() == n2.getId();
     }
@@ -26,7 +26,7 @@ public abstract class DepthFirstTransverser {
      * @param foundPaths
      * @return
      */
-    public boolean transverseMap(Node startNode, Node targetNode, ArrayList<ArrayList<Node<String>>> foundPaths, ArrayList<Node<String>> transversedPaths) {
+    public boolean transverseMap(Node startNode, Node targetNode, ArrayList<ArrayList<Node<T>>> foundPaths, ArrayList<Node<T>> transversedPaths) {
 
         if (transversedPaths.contains(startNode)) {
             return false;

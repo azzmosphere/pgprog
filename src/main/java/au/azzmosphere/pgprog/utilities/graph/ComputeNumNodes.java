@@ -1,4 +1,4 @@
-package au.azzmosphere.pgprog.utilities.lists;
+package au.azzmosphere.pgprog.utilities.graph;
 
 /**
  * Created by aaron.spiteri on 19/6/17.

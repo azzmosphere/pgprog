@@ -2,7 +2,7 @@ package au.azzmosphere.pgprog.utilities.lists;
 
 import org.junit.Test;
 
-import static au.azzmosphere.pgprog.utilities.lists.ComputeNumNodes.computeSqrNumNodes;
+import static au.azzmosphere.pgprog.utilities.graph.ComputeNumNodes.computeSqrNumNodes;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 
