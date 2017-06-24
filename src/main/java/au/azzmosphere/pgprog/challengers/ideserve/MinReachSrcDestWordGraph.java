@@ -9,11 +9,13 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.ArrayList;
+import java.util.List;
 
 import static au.azzmosphere.pgprog.challengers.ideserve.minreachsrcdestword.Trial.trialInsert;
 import static au.azzmosphere.pgprog.challengers.ideserve.minreachsrcdestword.Trial.trialDelete;
 import static au.azzmosphere.pgprog.challengers.ideserve.minreachsrcdestword.Trial.trialSubstitute;
 import static au.azzmosphere.pgprog.utilities.lists.Clone.cloneArray;
+
 /**
  * Created by aaron.spiteri on 13/6/17.
  */
@@ -49,7 +51,7 @@ public class MinReachSrcDestWordGraph extends DepthFirstTransverser implements C
 
     @Override
     public void process() throws Exception {
-        transverseMap(startNode, targetNode, foundPaths, new ArrayList<>());
+        transverseMap(startNode, targetNode, new ArrayList<>());
 
         // for each found path get the shortest.
         // set to a large size to start with
@@ -112,4 +114,13 @@ public class MinReachSrcDestWordGraph extends DepthFirstTransverser implements C
         }
     }
 
+    @Override
+    protected void handleFoundPath(List foundPath) {
+        foundPaths.add(cloneArray((ArrayList) foundPath));
+    }
+
+    @Override
+    protected List<Node> cloneList(List list) {
+        return cloneArray((ArrayList<Node>) list);
+    }
 }

@@ -2,7 +2,7 @@ package au.azzmosphere.pgprog.utilities.graph;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by aaron.spiteri on 18/6/17.
@@ -21,7 +21,11 @@ public class MatrixBuilder<T> {
      * @param values
      * @return
      */
-    public Node generateMatrix(int height, int width, ArrayList<T> values) {
+    public Node generateMatrix(int height, int width, List<T> values) {
+        return generateMatrix(height, width, values.toArray());
+    }
+
+    public Node generateMatrix(int height, int width, Object[] values) {
         logger.debug("building matrix");
 
         Node<T>[] vertices = createNodes(values);
@@ -43,11 +47,12 @@ public class MatrixBuilder<T> {
         return v;
     }
 
-    private Node<T>[] createNodes(ArrayList<T> values) {
-        Node<T>[] vertices = new Node[values.size()];
+    private Node<T>[] createNodes(Object[] values) {
+        Node<T>[] vertices = new Node[values.length];
 
         int i = 0;
-        for (T value : values) {
+        for (Object o : values) {
+            T value = (T) o;
             vertices[i] = new Node<T>();
             vertices[i].setValue(value);
             vertices[i].setId(i++);

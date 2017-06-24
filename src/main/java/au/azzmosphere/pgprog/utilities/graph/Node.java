@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Node<T> {
     private int id;
     private T value;
-    private List<Node<T>> edges = new ArrayList<>();
+    private ArrayList<Node<T>> edges = new ArrayList<>();
 
     /**
      *  returns the ID that has been set.
@@ -54,8 +54,8 @@ public class Node<T> {
      *
      * @return
      */
-    public List<Node<T>> allEdges() {
-        return edges;
+    public Object[] allEdges() {
+        return edges.toArray();
     }
 
     /**

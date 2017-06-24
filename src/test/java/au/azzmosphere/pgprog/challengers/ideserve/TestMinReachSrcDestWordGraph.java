@@ -20,9 +20,8 @@ public class TestMinReachSrcDestWordGraph {
         n.setId(0);
         n.setValue(dictionaryArray[0]);
         minReachSrcDestWordGraph.appendMap(dictionaryArray, n);
-
-        assertThat(n.allEdges().size(), is(1));
-        assertThat(n.allEdges().get(0).getId(), is(3));
+        assertThat(n.allEdges().length, is(1));
+        assertThat(((Node) n.allEdges()[0]).getId(), is(3));
     }
 
     @Test
@@ -32,9 +31,9 @@ public class TestMinReachSrcDestWordGraph {
         n.setValue(dictionaryArray[1]);
         minReachSrcDestWordGraph.appendMap(dictionaryArray, n);
 
-        assertThat(n.allEdges().size(), is(2));
-        assertThat(n.allEdges().get(0).getId(), is(2));
-        assertThat(n.allEdges().get(1).getId(), is(6));
+        assertThat(n.allEdges().length, is(2));
+        assertThat(((Node) n.allEdges()[0]).getId(), is(2));
+        assertThat(((Node) n.allEdges()[1]).getId(), is(6));
     }
 
     @Test
@@ -44,9 +43,9 @@ public class TestMinReachSrcDestWordGraph {
         n.setValue(dictionaryArray[2]);
         minReachSrcDestWordGraph.appendMap(dictionaryArray, n);
 
-        assertThat(n.allEdges().size(), is(3));
-        assertThat(n.allEdges().get(0).getId(), is(1));
-        assertThat(n.allEdges().get(1).getId(), is(4));
-        assertThat(n.allEdges().get(2).getId(), is(6));
+        assertThat(n.allEdges().length, is(3));
+        assertThat(((Node) n.allEdges()[0]).getId(), is(1));
+        assertThat(((Node) n.allEdges()[1]).getId(), is(4));
+        assertThat(((Node) n.allEdges()[2]).getId(), is(6));
     }
 }

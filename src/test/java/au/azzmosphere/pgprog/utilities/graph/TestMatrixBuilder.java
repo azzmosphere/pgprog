@@ -23,8 +23,8 @@ public class TestMatrixBuilder {
 
         Node<Boolean> n = matrixBuilder.generateMatrix(h, w, values);
         assertThat(n.getId(), is(0));
-        assertThat(n.allEdges().get(0).getId(), is(1));
-        assertThat(n.allEdges().get(1).getId(), is(2));
-        assertThat(n.allEdges().get(0).allEdges().get(0).getId(), is(3));
+        assertThat(((Node) n.allEdges()[0]).getId(), is(1));
+        assertThat(((Node) n.allEdges()[1]).getId(), is(2));
+        assertThat(((Node)(((Node) n.allEdges()[0]).allEdges())[0]).getId(), is(3));
     }
 }
