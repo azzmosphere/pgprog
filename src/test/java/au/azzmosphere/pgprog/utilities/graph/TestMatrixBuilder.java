@@ -27,4 +27,12 @@ public class TestMatrixBuilder {
         assertThat(((Node) n.allEdges()[1]).getId(), is(2));
         assertThat(((Node)(((Node) n.allEdges()[0]).allEdges())[0]).getId(), is(3));
     }
+
+    @Test
+    public void testGenerateMatrix2() {
+        int width = 3;
+        ArrayList<Node> nodes = new ArrayList();
+
+        Node n = matrixBuilder.generateMatrix(width, nodes);
+    }
 }

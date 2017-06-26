@@ -20,17 +20,17 @@ public class TestDepthFirstTransverser {
     private MatrixBuilder matrixBuilder = new MatrixBuilder();
     private int foundPaths = 0;
 
-    private DepthFirstTransverser<Boolean> depthFirstTransverser = new DepthFirstTransverser<Boolean>() {
-        @Override
-        protected boolean checkNode(Node n1, Node n2) {
-            return super.checkNode(n1, n2);
-        }
-
-        @Override
-        protected void handleFoundPath(List<Node<Boolean>> foundPath) {
-            foundPaths++;
-        }
-    };
+//    private DepthFirstTransverser<Boolean> depthFirstTransverser = new DepthFirstTransverser<Boolean>() {
+//        @Override
+//        protected boolean checkNode(Node n1, Node n2) {
+//            return super.checkNode(n1, n2);
+//        }
+//
+//        @Override
+//        protected void handleFoundPath(List<Node<Boolean>> foundPath) {
+//            foundPaths++;
+//        }
+//    };
 
 //    @Test
 //    public void testTransverseMap() {
@@ -60,18 +60,18 @@ public class TestDepthFirstTransverser {
 //        System.out.println("found paths = " + foundPaths.size());
 //    }
 
-    @Test
-    public void testTransverseMap3() {
-        int w = 20, h = 20;
-        List<Boolean> values=new ArrayList<>(Arrays.asList(new Boolean[
-                computeSqrNumNodes(w, h)]));
-
-        Node<Boolean> startNode = (new MatrixBuilder<Boolean>()).generateMatrix(w + 1, h + 1, values),
-                targetNode = new Node<>();
-
-        targetNode.setId(values.size() - 1);
-        depthFirstTransverser.transverseMap(startNode, targetNode, new LinkedList<>());
-
-        System.out.println("found paths = " + foundPaths);
-    }
+//    @Test
+//    public void testTransverseMap3() {
+//        int w = 20, h = 20;
+//        List<Boolean> values=new ArrayList<>(Arrays.asList(new Boolean[
+//                computeSqrNumNodes(w, h)]));
+//
+//        Node<Boolean> startNode = (new MatrixBuilder<Boolean>()).generateMatrix(w + 1, h + 1, values),
+//                targetNode = new Node<>();
+//
+//        targetNode.setId(values.size() - 1);
+//        depthFirstTransverser.transverseMap(startNode, targetNode, new LinkedList<>());
+//
+//        System.out.println("found paths = " + foundPaths);
+//    }
 }

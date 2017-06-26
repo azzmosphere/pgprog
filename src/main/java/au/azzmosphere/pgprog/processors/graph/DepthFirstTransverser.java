@@ -66,12 +66,13 @@ public abstract class DepthFirstTransverser<T> {
      */
     public boolean transverseMap(Node startNode, Node targetNode, List<Node<T>> transversedPaths) {
         if ((transversedPaths.size() > 1) && transversedPaths.contains(startNode)) {
+            transversedPaths.clear();
             return false;
         }
 
         transversedPaths.add(startNode);
         if (checkNode(startNode, targetNode)) {
-            logger.debug("path found - cloning path and adding it to found paths");
+            logger.debug("path found - calling handler with found path");
             handleFoundPath(transversedPaths);
             return true;
         }
@@ -80,6 +81,7 @@ public abstract class DepthFirstTransverser<T> {
             Node n = (Node) e;
             transverseMap(n, targetNode, cloneList(transversedPaths));
         }
+        transversedPaths.clear();
         return false;
     }
 }

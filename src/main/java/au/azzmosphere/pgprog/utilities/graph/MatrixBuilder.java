@@ -3,6 +3,7 @@ package au.azzmosphere.pgprog.utilities.graph;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by aaron.spiteri on 18/6/17.
@@ -60,4 +61,35 @@ public class MatrixBuilder<T> {
 
         return vertices;
     }
+
+    public Node generateMatrix(int width, ArrayList<Node> nodes) {
+        int j = 0;
+        for (int y = 0; y <= width; y++) {
+            for (int i = 0;i <= y; i++) {
+                int e1 = -1, e2 = -1;
+                Node n = new Node();
+                n.setId(j++);
+                nodes.add(n);
+
+                if (i > 0) {
+                    e1 = j -2;
+                    nodes.get(e1).addEdge(n);
+                }
+
+                if (y > 0 && i < y) {
+                    e2 = (j - 1) - y;
+                    nodes.get(e2).addEdge(n);
+                }
+                else if (i == y && y > 0) {
+                    e2 = (j - 1) - (y + 1);
+                    nodes.get(e2).addEdge(n);
+                }
+                System.out.print(n.getId() + "(" + e1 + "," + e2 + ") ");
+            }
+            System.out.println("");
+        }
+
+        return nodes.get(0);
+    }
+
 }
