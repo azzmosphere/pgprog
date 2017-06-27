@@ -1,14 +1,14 @@
 package au.azzmosphere.pgprog.challengers.ideserve;
 
-import org.junit.Test;
-
-import au.azzmosphere.pgprog.challengers.ideserve.numofclusters.Cluster;
-import au.azzmosphere.pgprog.challengers.ideserve.numofclusters.Node;
-
-import java.util.Arrays;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.CoreMatchers.is;
+//import org.junit.Test;
+//
+//import au.azzmosphere.pgprog.challengers.ideserve.numofclusters.Cluster;
+//import au.azzmosphere.pgprog.challengers.ideserve.numofclusters.Node;
+//
+//import java.util.Arrays;
+//
+//import static org.hamcrest.MatcherAssert.assertThat;
+//import static org.hamcrest.CoreMatchers.is;
 
 /**
  * Created by aaron.spiteri on 27/5/17.

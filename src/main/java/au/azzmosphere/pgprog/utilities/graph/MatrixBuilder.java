@@ -65,14 +65,14 @@ public class MatrixBuilder<T> {
     public Node generateMatrix(int width, ArrayList<Node> nodes) {
         int j = 0;
         for (int y = 0; y <= width; y++) {
-            for (int i = 0;i <= y; i++) {
+            for (int i = 0; i <= y; i++) {
                 int e1 = -1, e2 = -1;
                 Node n = new Node();
                 n.setId(j++);
                 nodes.add(n);
 
                 if (i > 0) {
-                    e1 = j -2;
+                    e1 = j - 2;
                     nodes.get(e1).addEdge(n);
                 }
 

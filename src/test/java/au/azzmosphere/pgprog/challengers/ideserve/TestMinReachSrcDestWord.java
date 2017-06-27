@@ -1,10 +1,8 @@
 package au.azzmosphere.pgprog.challengers.ideserve;
 
-import au.azzmosphere.pgprog.challengers.ideserve.MinReachSrcDestWord;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
@@ -25,7 +23,7 @@ public class TestMinReachSrcDestWord {
         ArrayList a = new ArrayList();
         a.add("ICC");
 
-        assertThat(object.seekTrails(1,2, new ArrayList()), is(a));
+        assertThat(object.seekTrails(1, 2, new ArrayList()), is(a));
     }
 
     @Test
@@ -33,7 +31,7 @@ public class TestMinReachSrcDestWord {
         ArrayList a = new ArrayList();
         a.add("ICC");
         a.add("MCC");
-        assertThat(object.seekTrails(1,4, new ArrayList()), is(a));
+        assertThat(object.seekTrails(1, 4, new ArrayList()), is(a));
     }
 
     @Test
@@ -43,6 +41,6 @@ public class TestMinReachSrcDestWord {
         a.add("ICC");
         a.add("MCC");
         a.add("MCA");
-        assertThat(object.seekTrails(1,5, new ArrayList()), is(a));
+        assertThat(object.seekTrails(1, 5, new ArrayList()), is(a));
     }
 }

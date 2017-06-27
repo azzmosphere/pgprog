@@ -13,7 +13,7 @@ public class TestComputSqrNumNodes {
 
     @Test
     public void testComputeSqrNumNodes() {
-        assertThat(computeSqrNumNodes(2,2), is(9));
-        assertThat(computeSqrNumNodes(3,3), is(16));
+        assertThat(computeSqrNumNodes(2, 2), is(9));
+        assertThat(computeSqrNumNodes(3, 3), is(16));
     }
 }

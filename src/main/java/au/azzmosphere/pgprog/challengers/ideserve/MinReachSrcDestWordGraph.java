@@ -36,8 +36,8 @@ public class MinReachSrcDestWordGraph extends DepthFirstTransverser implements C
         targetNode = nodeMap.get(Integer.valueOf((String) inputMap.get("endword")));
     }
 
-    protected void createNodeMap(String[] dictionaryArray ) {
-        for (int i = 0;i < dictionaryArray.length; i ++) {
+    protected void createNodeMap(String[] dictionaryArray) {
+        for (int i = 0; i < dictionaryArray.length; i++) {
             if (!nodeMap.containsKey(i)) {
                 nodeMap.put(i, new Node<>());
                 nodeMap.get(i).setId(i);
@@ -72,7 +72,7 @@ public class MinReachSrcDestWordGraph extends DepthFirstTransverser implements C
                 outputString += n.getValue() + "->";
             }
 
-            outputString = outputString.substring(0, outputString.length() -2);
+            outputString = outputString.substring(0, outputString.length() - 2);
         }
     }
 

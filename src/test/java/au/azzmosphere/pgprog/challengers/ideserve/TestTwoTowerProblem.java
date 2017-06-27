@@ -15,7 +15,7 @@ public class TestTwoTowerProblem {
     @Test
     public void testFindLargestNodes1() {
         ArrayList<Integer> array =
-                new ArrayList<Integer>(Arrays.asList(new Integer[]{3,1,2}));
+                new ArrayList<Integer>(Arrays.asList(new Integer[]{3, 1, 2}));
         twoTowerProblem.setTowers(array);
 
         twoTowerProblem.findLargestNodes();
@@ -26,7 +26,7 @@ public class TestTwoTowerProblem {
     @Test
     public void testFindLargestNodes2() {
         ArrayList<Integer> array =
-                new ArrayList<Integer>(Arrays.asList(new Integer[]{4,1,2,2,3}));
+                new ArrayList<Integer>(Arrays.asList(new Integer[]{4, 1, 2, 2, 3}));
         twoTowerProblem.setTowers(array);
 
         twoTowerProblem.findLargestNodes();
@@ -37,7 +37,7 @@ public class TestTwoTowerProblem {
     @Test
     public void testFindLargestNodes3() {
         ArrayList<Integer> array =
-                new ArrayList<Integer>(Arrays.asList(new Integer[]{1,5,2,2,3,7}));
+                new ArrayList<Integer>(Arrays.asList(new Integer[]{1, 5, 2, 2, 3, 7}));
         twoTowerProblem.setTowers(array);
 
         twoTowerProblem.findLargestNodes();
@@ -48,7 +48,7 @@ public class TestTwoTowerProblem {
     @Test
     public void testMaxVolume1() {
         ArrayList<Integer> array =
-                new ArrayList<Integer>(Arrays.asList(new Integer[]{3,1,2}));
+                new ArrayList<Integer>(Arrays.asList(new Integer[]{3, 1, 2}));
         twoTowerProblem.setTowers(array);
         twoTowerProblem.findLargestNodes();
         assertThat(twoTowerProblem.maxVolume(), is(2));
@@ -57,7 +57,7 @@ public class TestTwoTowerProblem {
     @Test
     public void testMaxVolume2() {
         ArrayList<Integer> array =
-                new ArrayList<Integer>(Arrays.asList(new Integer[]{1,5,2,2,3,7}));
+                new ArrayList<Integer>(Arrays.asList(new Integer[]{1, 5, 2, 2, 3, 7}));
         twoTowerProblem.setTowers(array);
         twoTowerProblem.findLargestNodes();
         assertThat(twoTowerProblem.maxVolume(), is(15));
@@ -66,7 +66,7 @@ public class TestTwoTowerProblem {
     @Test
     public void testMaxVolume3() {
         ArrayList<Integer> array =
-                new ArrayList<Integer>(Arrays.asList(new Integer[]{4,1,2,2,3}));
+                new ArrayList<Integer>(Arrays.asList(new Integer[]{4, 1, 2, 2, 3}));
         twoTowerProblem.setTowers(array);
         twoTowerProblem.findLargestNodes();
         assertThat(twoTowerProblem.maxVolume(), is(9));
@@ -75,18 +75,18 @@ public class TestTwoTowerProblem {
     @Test
     public void testVolume1() {
         ArrayList<Integer> array =
-                new ArrayList<Integer>(Arrays.asList(new Integer[]{3,1,2}));
+                new ArrayList<Integer>(Arrays.asList(new Integer[]{3, 1, 2}));
         twoTowerProblem.setTowers(array);
         twoTowerProblem.findLargestNodes();
-        assertThat( twoTowerProblem.volume(twoTowerProblem.maxVolume()), is(1));
+        assertThat(twoTowerProblem.volume(twoTowerProblem.maxVolume()), is(1));
     }
 
     @Test
     public void testVolume2() {
         ArrayList<Integer> array =
-                new ArrayList<Integer>(Arrays.asList(new Integer[]{4,1,2,2,3}));
+                new ArrayList<Integer>(Arrays.asList(new Integer[]{4, 1, 2, 2, 3}));
         twoTowerProblem.setTowers(array);
         twoTowerProblem.findLargestNodes();
-        assertThat( twoTowerProblem.volume(twoTowerProblem.maxVolume()), is(4));
+        assertThat(twoTowerProblem.volume(twoTowerProblem.maxVolume()), is(4));
     }
 }

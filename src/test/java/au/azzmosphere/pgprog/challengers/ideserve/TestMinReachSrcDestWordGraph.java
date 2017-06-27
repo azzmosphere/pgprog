@@ -11,7 +11,7 @@ import static org.hamcrest.CoreMatchers.is;
  * Created by aaron.spiteri on 14/6/17.
  */
 public class TestMinReachSrcDestWordGraph {
-    private String[] dictionaryArray = new String[]{"BCCI","AICC","ICC","CCI","MCC","MCA", "ACC"};
+    private String[] dictionaryArray = new String[]{"BCCI", "AICC", "ICC", "CCI", "MCC", "MCA", "ACC"};
     private MinReachSrcDestWordGraph  minReachSrcDestWordGraph = new MinReachSrcDestWordGraph();
 
     @Test

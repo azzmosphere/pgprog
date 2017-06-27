@@ -1,24 +1,14 @@
 package au.azzmosphere.pgprog.processors.graph;
 
-import au.azzmosphere.pgprog.utilities.graph.MatrixBuilder;
-import au.azzmosphere.pgprog.utilities.graph.Node;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.LinkedList;
+//import au.azzmosphere.pgprog.utilities.graph.MatrixBuilder;
 
-import org.junit.Test;
-
-import static au.azzmosphere.pgprog.utilities.graph.ComputeNumNodes.computeSqrNumNodes;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.CoreMatchers.is;
 
 /**
  * Created by aaron.spiteri on 21/6/17.
  */
 public class TestDepthFirstTransverser {
-    private MatrixBuilder matrixBuilder = new MatrixBuilder();
-    private int foundPaths = 0;
+//    private MatrixBuilder matrixBuilder = new MatrixBuilder();
+//    private int foundPaths = 0;
 
 //    private DepthFirstTransverser<Boolean> depthFirstTransverser = new DepthFirstTransverser<Boolean>() {
 //        @Override

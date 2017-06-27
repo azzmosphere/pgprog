@@ -1,6 +1,5 @@
 package au.azzmosphere.pgprog.utilities.lists.strings;
 
-import au.azzmosphere.pgprog.utilities.lists.strings.StringToList;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -16,7 +15,7 @@ public class TestStringToList {
     @Test
     public void testStringToList1() {
         StringToList<Integer> stringToList = new StringToList<>();
-        List<Integer> l = Arrays.asList(new Integer[]{1,2,3,4});
+        List<Integer> l = Arrays.asList(new Integer[]{1, 2, 3, 4});
         List<Integer> y = stringToList.createList("1 2 3 4", Integer.class);
 
         assertThat(l, is(y));
