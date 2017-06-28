@@ -6,3 +6,6 @@
 /gradle/
 /.gradle/
 /src/main/.sass-cache/
+.sass-cache/
+build/
+pgprog.iws
