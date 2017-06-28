@@ -1469,19 +1469,14 @@ body {
   padding-right: 20px;
 }
 
-/* line 56, ../../src/main/scss/pgprog.scss */
+/* line 55, ../../src/main/scss/pgprog.scss */
 a, a:active, a:hover, a:visited {
   color: red;
   text-decoration: none;
   padding-right: 20px;
 }
 
-/* line 61, ../../src/main/scss/pgprog.scss */
+/* line 60, ../../src/main/scss/pgprog.scss */
 a:active, a:hover {
   color: blue;
-}
-
-/* line 71, ../../src/main/scss/pgprog.scss */
-option {
-  @extends .button-dropdown;
 }
