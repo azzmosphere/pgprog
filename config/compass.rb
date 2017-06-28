@@ -1,14 +1,17 @@
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
 
+# Edit the project configuration file and add:
+#require 'sassy-buttons'
+
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "stylesheets"
-css_path = "/Volumes/Macintosh_HD_Case_Sensitive/workspace/pgprog/public/css"
+css_path = "public/css"
 sass_dir = "sass"
-sass_path = "/Volumes/Macintosh_HD_Case_Sensitive/workspace/pgprog/src/main/scss"
-images_dir = "images"
-javascripts_dir = "javascripts"
+sass_path = "src/main/scss"
+images_dir = "public/images"
+javascripts_dir = "public/js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

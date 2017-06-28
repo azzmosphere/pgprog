@@ -4,6 +4,8 @@ $font-stack:   Arial;
 $primary-color: #333;
 $font-size: 12px;
 
+$font-size-button: 8px;
+
 body {
   font: 100% $font-stack;
   color: $primary-color;
@@ -48,6 +50,7 @@ $pad: 20px;
 
 $a-tags: 'a, a:active, a:hover, a:visited';
 $a-tags-hover: 'a:active, a:hover';
+$button-tags: 'button';
 
 #{$a-tags} {
   color: red;
@@ -57,3 +60,13 @@ $a-tags-hover: 'a:active, a:hover';
 #{$a-tags-hover} {
   color: blue;
 }
+
+#{$button-tags} {
+    @extend .button;
+    @extend .button-rounded;
+    @extend .button-caution;
+}
+
+
+
+

@@ -112,7 +112,7 @@
         ]]></description>
         <clazz>au.azzmosphere.pgprog.challengers.ideserve.MinReachSrcDestWord</clazz>
         <view>minreachsrcdestwrdview.html</view>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
     </challenge>
 
     <challenge>
