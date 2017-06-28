@@ -9,3 +9,8 @@
 .sass-cache/
 build/
 pgprog.iws
+/public/css/pgprog.css
+/public/css/buttons.css
+/public/css/nice-select.css
+/public/css/style.css
+/public/css/prism.css

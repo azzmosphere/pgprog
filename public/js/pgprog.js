@@ -98,10 +98,5 @@ function linkButton(divId, challengeId) {
     );
  }
 
-/**
- * initalise the form attributes.
- */
-function initFormAttributes() {
-    $('select').niceSelect();
-}
+
 

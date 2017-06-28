@@ -11,14 +11,15 @@
         createList("#dictonary", "#startword");
         createList("#dictonary", "#endword");
         linkButton('#processmintrial', 'reachsrcdestwordgraph');
+        $('select').niceSelect();
     });
 </script>
 
 <p>
     <textarea name="dictonary" rows="5" cols="30" id="dictonary" disabled>BCCI,AICC,ICC,CCI,MCC,MCA,ACC</textarea> <br />
 
-    <select id="startword" /> <br />
-    <select id="endword" /> <br />
+    <select id="startword" name="startword" /> <br />
+    <select id="endword"  name="endword"/> <br />
 </p>
 <p>
     <button id="processmintrial">Click Me!</button>

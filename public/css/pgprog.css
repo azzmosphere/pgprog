@@ -111,7 +111,7 @@
   text-align: center;
 }
 /* line 44, ../../src/main/scss/partials/_buttons.scss */
-.button:hover, button:hover, .button:focus, button:focus, .button:active, button:active, .button.is-active, button.is-active, .button.active, button.active {
+.button:hover, button:hover, .button:focus, button:focus, .button:active, .button.nice-select.open, button.nice-select.open, button:active, .button.is-active, button.is-active, .button.active, button.active {
   text-decoration: none;
 }
 /* line 48, ../../src/main/scss/partials/_buttons.scss */
@@ -125,7 +125,7 @@
   background: linear-gradient(to bottom, #ffffff, #dcdcdc);
 }
 /* line 53, ../../src/main/scss/partials/_buttons.scss */
-.button:active, button:active, .button.is-active, button.is-active, .button.active, button.active {
+.button:active, .button.nice-select.open, button.nice-select.open, button:active, .button.is-active, button.is-active, .button.active, button.active {
   -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
   -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
@@ -157,6 +157,8 @@ button.disabled:hover,
 .button.disabled:focus,
 button.disabled:focus,
 .button.disabled:active,
+.button.disabled.nice-select.open,
+button.disabled.nice-select.open,
 button.disabled:active,
 input.button:disabled,
 button.button:disabled,
@@ -213,7 +215,7 @@ button:disabled {
   background: #fbfbfb;
 }
 /* line 116, ../../src/main/scss/partials/_buttons.scss */
-.button-flat:active, .button-flat.is-active, .button-flat.active {
+.button-flat:active, .button-flat.nice-select.open, .button-flat.is-active, .button-flat.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -254,7 +256,7 @@ button:disabled {
   border: 2px solid gray;
 }
 /* line 145, ../../src/main/scss/partials/_buttons.scss */
-.button-border:active, .button-border.is-active, .button-border.active {
+.button-border:active, .button-border.nice-select.open, .button-border.is-active, .button-border.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -310,7 +312,7 @@ button:disabled {
   color: #666;
 }
 /* line 179, ../../src/main/scss/partials/_buttons.scss */
-.button-3d:active, .button-3d.is-active, .button-3d.active {
+.button-3d:active, .button-3d.nice-select.open, .button-3d.is-active, .button-3d.active {
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bbbbbb, 0px 3px 3px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bbbbbb, 0px 3px 3px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bbbbbb, 0px 3px 3px rgba(0, 0, 0, 0.2);
@@ -385,7 +387,7 @@ button:disabled {
   background: linear-gradient(to bottom, #00c9fe, #008db2);
 }
 /* line 247, ../../src/main/scss/partials/_buttons.scss */
-.button-primary:active, .button-primary.is-active, .button-primary.active {
+.button-primary:active, .button-primary.nice-select.open, .button-primary.is-active, .button-primary.active {
   background: #1495b7;
   color: #005065;
 }
@@ -429,7 +431,7 @@ button:disabled {
   color: #FFFFFF;
 }
 /* line 278, ../../src/main/scss/partials/_buttons.scss */
-.button-3d-primary:active, .button-3d-primary.is-active, .button-3d-primary.active {
+.button-3d-primary:active, .button-3d-primary.nice-select.open, .button-3d-primary.is-active, .button-3d-primary.active {
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #007998, 0px 3px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #007998, 0px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #007998, 0px 3px 3px rgba(0, 0, 0, 0.3);
@@ -476,7 +478,7 @@ button:disabled {
   border: 2px solid #00c9fe;
 }
 /* line 314, ../../src/main/scss/partials/_buttons.scss */
-.button-border-primary:active, .button-border-primary.is-active, .button-border-primary.active {
+.button-border-primary:active, .button-border-primary.nice-select.open, .button-border-primary.is-active, .button-border-primary.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -517,7 +519,7 @@ button:disabled {
   background: #00b5e5;
 }
 /* line 345, ../../src/main/scss/partials/_buttons.scss */
-.button-flat-primary:active, .button-flat-primary.is-active, .button-flat-primary.active {
+.button-flat-primary:active, .button-flat-primary.nice-select.open, .button-flat-primary.is-active, .button-flat-primary.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -556,7 +558,7 @@ button:disabled {
   background: linear-gradient(to bottom, #a0e800, #6b9c00);
 }
 /* line 247, ../../src/main/scss/partials/_buttons.scss */
-.button-action:active, .button-action.is-active, .button-action.active {
+.button-action:active, .button-action.nice-select.open, .button-action.is-active, .button-action.active {
   background: #76a312;
   color: #374f00;
 }
@@ -600,7 +602,7 @@ button:disabled {
   color: #FFFFFF;
 }
 /* line 278, ../../src/main/scss/partials/_buttons.scss */
-.button-3d-action:active, .button-3d-action.is-active, .button-3d-action.active {
+.button-3d-action:active, .button-3d-action.nice-select.open, .button-3d-action.is-active, .button-3d-action.active {
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #5a8200, 0px 3px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #5a8200, 0px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #5a8200, 0px 3px 3px rgba(0, 0, 0, 0.3);
@@ -647,7 +649,7 @@ button:disabled {
   border: 2px solid #a0e800;
 }
 /* line 314, ../../src/main/scss/partials/_buttons.scss */
-.button-border-action:active, .button-border-action.is-active, .button-border-action.active {
+.button-border-action:active, .button-border-action.nice-select.open, .button-border-action.is-active, .button-border-action.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -688,7 +690,7 @@ button:disabled {
   background: #8fcf00;
 }
 /* line 345, ../../src/main/scss/partials/_buttons.scss */
-.button-flat-action:active, .button-flat-action.is-active, .button-flat-action.active {
+.button-flat-action:active, .button-flat-action.nice-select.open, .button-flat-action.is-active, .button-flat-action.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -727,7 +729,7 @@ button:disabled {
   background: linear-gradient(to bottom, #fba42e, #d87e04);
 }
 /* line 247, ../../src/main/scss/partials/_buttons.scss */
-.button-highlight:active, .button-highlight.is-active, .button-highlight.active {
+.button-highlight:active, .button-highlight.nice-select.open, .button-highlight.is-active, .button-highlight.active {
   background: #d8891e;
   color: #8d5303;
 }
@@ -771,7 +773,7 @@ button:disabled {
   color: #FFFFFF;
 }
 /* line 278, ../../src/main/scss/partials/_buttons.scss */
-.button-3d-highlight:active, .button-3d-highlight.is-active, .button-3d-highlight.active {
+.button-3d-highlight:active, .button-3d-highlight.nice-select.open, .button-3d-highlight.is-active, .button-3d-highlight.active {
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bf7004, 0px 3px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bf7004, 0px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bf7004, 0px 3px 3px rgba(0, 0, 0, 0.3);
@@ -818,7 +820,7 @@ button:disabled {
   border: 2px solid #fba42e;
 }
 /* line 314, ../../src/main/scss/partials/_buttons.scss */
-.button-border-highlight:active, .button-border-highlight.is-active, .button-border-highlight.active {
+.button-border-highlight:active, .button-border-highlight.nice-select.open, .button-border-highlight.is-active, .button-border-highlight.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -859,7 +861,7 @@ button:disabled {
   background: #fa9915;
 }
 /* line 345, ../../src/main/scss/partials/_buttons.scss */
-.button-flat-highlight:active, .button-flat-highlight.is-active, .button-flat-highlight.active {
+.button-flat-highlight:active, .button-flat-highlight.nice-select.open, .button-flat-highlight.is-active, .button-flat-highlight.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -898,7 +900,7 @@ button:disabled {
   background: linear-gradient(to bottom, #eb6855, #d9331a);
 }
 /* line 247, ../../src/main/scss/partials/_buttons.scss */
-.button-caution:active, button:active, .button-caution.is-active, button.is-active, .button-caution.active, button.active {
+.button-caution:active, .button-caution.nice-select.open, button.nice-select.open, button:active, .button-caution.is-active, button.is-active, .button-caution.active, button.active {
   background: #cd5240;
   color: #952312;
 }
@@ -942,7 +944,7 @@ button:disabled {
   color: #FFFFFF;
 }
 /* line 278, ../../src/main/scss/partials/_buttons.scss */
-.button-3d-caution:active, .button-3d-caution.is-active, .button-3d-caution.active {
+.button-3d-caution:active, .button-3d-caution.nice-select.open, .button-3d-caution.is-active, .button-3d-caution.active {
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #c22d18, 0px 3px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #c22d18, 0px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #c22d18, 0px 3px 3px rgba(0, 0, 0, 0.3);
@@ -989,7 +991,7 @@ button:disabled {
   border: 2px solid #eb6855;
 }
 /* line 314, ../../src/main/scss/partials/_buttons.scss */
-.button-border-caution:active, .button-border-caution.is-active, .button-border-caution.active {
+.button-border-caution:active, .button-border-caution.nice-select.open, .button-border-caution.is-active, .button-border-caution.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -1030,7 +1032,7 @@ button:disabled {
   background: #e8543f;
 }
 /* line 345, ../../src/main/scss/partials/_buttons.scss */
-.button-flat-caution:active, .button-flat-caution.is-active, .button-flat-caution.active {
+.button-flat-caution:active, .button-flat-caution.nice-select.open, .button-flat-caution.is-active, .button-flat-caution.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -1069,7 +1071,7 @@ button:disabled {
   background: linear-gradient(to bottom, #ab3eb2, #752a79);
 }
 /* line 247, ../../src/main/scss/partials/_buttons.scss */
-.button-royal:active, .button-royal.is-active, .button-royal.active {
+.button-royal:active, .button-royal.nice-select.open, .button-royal.is-active, .button-royal.active {
   background: #764479;
   color: #3e1740;
 }
@@ -1113,7 +1115,7 @@ button:disabled {
   color: #FFFFFF;
 }
 /* line 278, ../../src/main/scss/partials/_buttons.scss */
-.button-3d-royal:active, .button-3d-royal.is-active, .button-3d-royal.active {
+.button-3d-royal:active, .button-3d-royal.nice-select.open, .button-3d-royal.is-active, .button-3d-royal.active {
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #632466, 0px 3px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #632466, 0px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #632466, 0px 3px 3px rgba(0, 0, 0, 0.3);
@@ -1160,7 +1162,7 @@ button:disabled {
   border: 2px solid #ab3eb2;
 }
 /* line 314, ../../src/main/scss/partials/_buttons.scss */
-.button-border-royal:active, .button-border-royal.is-active, .button-border-royal.active {
+.button-border-royal:active, .button-border-royal.nice-select.open, .button-border-royal.is-active, .button-border-royal.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -1201,7 +1203,7 @@ button:disabled {
   background: #99389f;
 }
 /* line 345, ../../src/main/scss/partials/_buttons.scss */
-.button-flat-royal:active, .button-flat-royal.is-active, .button-flat-royal.active {
+.button-flat-royal:active, .button-flat-royal.nice-select.open, .button-flat-royal.is-active, .button-flat-royal.active {
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
@@ -1231,7 +1233,7 @@ button:disabled {
   z-index: 5;
 }
 /* line 371, ../../src/main/scss/partials/_buttons.scss */
-.button-group .button:active, .button-group button:active, .button-group .button.active, .button-group button.active {
+.button-group .button:active, .button-group .button.nice-select.open, .button-group button.nice-select.open, .button-group button:active, .button-group .button.active, .button-group button.active {
   background: gainsboro;
 }
 /* line 375, ../../src/main/scss/partials/_buttons.scss */
@@ -1321,7 +1323,7 @@ input.button-tiny, button.button-tiny {
   animation-name: glowing;
 }
 /* line 456, ../../src/main/scss/partials/_buttons.scss */
-.button.glow:active, button.glow:active {
+.button.glow:active, .button.glow.nice-select.open, button.glow.nice-select.open, button.glow:active {
   -webkit-animation-name: none;
   -moz-animation-name: none;
   -ms-animation-name: none;
@@ -1419,6 +1421,161 @@ input.button-tiny, button.button-tiny {
   color: #FFF;
 }
 
+/* line 19, ../../src/main/scss/nice-select.scss */
+select {
+  display: none;
+}
+
+/* line 24, ../../src/main/scss/nice-select.scss */
+.nice-select {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  height: 42px;
+  line-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 30px;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+}
+/* line 48, ../../src/main/scss/nice-select.scss */
+.nice-select:hover {
+  border-color: #dbdbdb;
+}
+/* line 51, ../../src/main/scss/nice-select.scss */
+.nice-select:active, .nice-select.open, .nice-select:focus {
+  border-color: #999;
+}
+/* line 55, ../../src/main/scss/nice-select.scss */
+.nice-select:after {
+  border-bottom: 2px solid #999;
+  border-right: 2px solid #999;
+  content: '';
+  display: block;
+  height: 5px;
+  margin-top: -4px;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform-origin: 66% 66%;
+  transform: rotate(45deg);
+  transition: all 0.15s ease-in-out;
+  width: 5px;
+}
+/* line 74, ../../src/main/scss/nice-select.scss */
+.nice-select.open:after {
+  transform: rotate(-135deg);
+}
+/* line 77, ../../src/main/scss/nice-select.scss */
+.nice-select.open .list {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1) translateY(0);
+}
+/* line 83, ../../src/main/scss/nice-select.scss */
+.nice-select.disabled {
+  border-color: #ededed;
+  color: #999;
+  pointer-events: none;
+}
+/* line 87, ../../src/main/scss/nice-select.scss */
+.nice-select.disabled:after {
+  border-color: #cccccc;
+}
+/* line 93, ../../src/main/scss/nice-select.scss */
+.nice-select.wide {
+  width: 100%;
+}
+/* line 95, ../../src/main/scss/nice-select.scss */
+.nice-select.wide .list {
+  left: 0 !important;
+  right: 0 !important;
+}
+/* line 100, ../../src/main/scss/nice-select.scss */
+.nice-select.right {
+  float: right;
+}
+/* line 102, ../../src/main/scss/nice-select.scss */
+.nice-select.right .list {
+  left: auto;
+  right: 0;
+}
+/* line 107, ../../src/main/scss/nice-select.scss */
+.nice-select.small {
+  font-size: 12px;
+  height: 36px;
+  line-height: 34px;
+}
+/* line 111, ../../src/main/scss/nice-select.scss */
+.nice-select.small:after {
+  height: 4px;
+  width: 4px;
+}
+/* line 115, ../../src/main/scss/nice-select.scss */
+.nice-select.small .option {
+  line-height: 34px;
+  min-height: 34px;
+}
+/* line 122, ../../src/main/scss/nice-select.scss */
+.nice-select .list {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+  box-sizing: border-box;
+  margin-top: 4px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform-origin: 50% 0;
+  transform: scale(0.75) translateY(-21px);
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  z-index: 9;
+}
+/* line 138, ../../src/main/scss/nice-select.scss */
+.nice-select .list:hover .option:not(:hover) {
+  background-color: transparent !important;
+}
+/* line 142, ../../src/main/scss/nice-select.scss */
+.nice-select .option {
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 40px;
+  list-style: none;
+  min-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 29px;
+  text-align: left;
+  transition: all 0.2s;
+}
+/* line 153, ../../src/main/scss/nice-select.scss */
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+  background-color: #f6f6f6;
+}
+/* line 156, ../../src/main/scss/nice-select.scss */
+.nice-select .option.selected {
+  font-weight: bold;
+}
+
 /* line 9, ../../src/main/scss/pgprog.scss */
 body {
   font: 100% Arial;
@@ -1470,13 +1627,13 @@ body {
 }
 
 /* line 55, ../../src/main/scss/pgprog.scss */
-a, a:active, a:hover, a:visited {
+a, a:active, a.nice-select.open, a:hover, a:visited {
   color: red;
   text-decoration: none;
   padding-right: 20px;
 }
 
 /* line 60, ../../src/main/scss/pgprog.scss */
-a:active, a:hover {
+a:active, a.nice-select.open, a:hover {
   color: blue;
 }
